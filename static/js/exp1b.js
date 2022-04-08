@@ -22,7 +22,7 @@ jsPlumb.ready(function () {
             dropOptions: { tolerance: "touch", hoverClass: "dropHover" }
         },
         endpoint2 = {
-            anchor: [0.5, 0.5, 0, -1],
+            anchor: [0.5, 0.5, 0, -2],
             connectorStyle: { strokeWidth: 4, stroke: "rgba(255,0,0)" },
             endpointsOnTop: true,
             isSource: true,
@@ -40,7 +40,7 @@ jsPlumb.ready(function () {
             dropOptions: { tolerance: "touch", hoverClass: "dropHover" }
         },
         endpoint4 = {
-            anchor: [0.5, 0.5, -5, -6.5],
+            anchor: [0.5, 0.5, 1, -3.5],
             connectorStyle: { strokeWidth: 4, stroke: "rgba(0,0,255)" },
             endpointsOnTop: true,
             isSource: true,
@@ -91,9 +91,19 @@ jsPlumb.ready(function () {
             e9 = prepare3("ld9"),
             e10 = prepare4("ld10"),
             e11 = prepare2("ld11"),
-            e12 = prepare3("ld12"),
-            e13 = prepare1("ld13"),
+            e12 = prepare4("ld12"),
+            e13 = prepare3("ld13"),
             e14 = prepare2("ld14"),
+            e15 = prepare3("ld15"),
+            e16 = prepare4("ld16"),
+            e17 = prepare3("ld17"),
+            e18 = prepare1("ld18"),
+            e19 = prepare2("ld19"),
+            e20 = prepare1("ld20"),
+            e21 = prepare3("ld21"),
+            e22 = prepare2("ld22"),
+            e23 = prepare3("ld23"),
+            e24 = prepare2("ld24"),
             clearBtn = jsPlumb.getSelector("#anim-clear"),
             addBtn = jsPlumb.getSelector("#add");
 
@@ -332,9 +342,18 @@ function disable_all() {
                 e10 = prepare1("ld10"),
                 e11 = prepare2("ld11"),
                 e12 = prepare3("ld12"),
-                e13 = prepare1("ld13"),
+                e13 = prepare3("ld13"),
                 e14 = prepare2("ld14"),
-
+                e15 = prepare3("ld15"),
+                e16 = prepare1("ld16"),
+                e17 = prepare3("ld17"),
+                e18 = prepare3("ld18"),
+                e19 = prepare1("ld19"),
+                e20 = prepare2("ld20"),
+                e21 = prepare3("ld21"),
+                e22 = prepare1("ld22"),
+                e23 = prepare3("ld23"),
+                e24 = prepare2("ld24"),
                 clearBtn = jsPlumb.getSelector("#anim-clear"),
                 addBtn = jsPlumb.getSelector("#add");
         });
@@ -384,10 +403,7 @@ function mcbonoff() {
             document.getElementById('myimage2').src = '/static/images/push2.png';
             document.getElementById('myimage3').src = '/static/images/push2.png';
 
-            document.getElementById("line1").style.backgroundColor = "green";
-            document.getElementById("line2").style.backgroundColor = "green";
-            document.getElementById("line3").style.backgroundColor = "green";
-            document.getElementById("line4").style.backgroundColor = "green";
+
             rotaronoff();
         }
         else {
