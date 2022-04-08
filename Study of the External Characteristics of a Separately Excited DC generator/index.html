@@ -2,8 +2,8 @@
 <html>
 
 <head>
-    <title>Study of the External Characteristics of a Separately Excited DC
-        Generator [1(b)]</title>
+    <title>Study of the Magnetization Characteristics of a Separately Excited DC
+        Generator [1(a)]</title>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <meta name="viewport"
         content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
@@ -32,8 +32,6 @@
                     <td>8</td>
                     <td>11</td>
                     <td>12</td>
-                    <td>11</td>
-                    <td>12</td>
                 </tr>
                 <tr>
                     <td><B>To</B></td>
@@ -44,8 +42,6 @@
                     <td>9</td>
                     <td>13</td>
                     <td>14</td>
-                    <td>15</td>
-                    <td>16</td>
                 </tr>
             </table>
         </div>
@@ -77,10 +73,6 @@
             <div class="littledot" id="ld13"></br><a href="#" class="detach" rel="ld13">13</a>
             </div>
             <div class="littledot" id="ld14"></br><a href="#" class="detach" rel="ld14">14</a>
-            </div>
-            <div class="littledot" id="ld15"></br><a href="#" class="detach" rel="ld15">15</a>
-            </div>
-            <div class="littledot" id="ld16"></br><a href="#" class="detach" rel="ld16">16</a>
             </div>
 
 
@@ -264,102 +256,103 @@
                         </div>
                     </div>
 
-                    <!-- External Load -->
-                    <div style="position: absolute;left: 74em; top: 17em; width: 160px; height: 140px;">
-                        <img src="../static/images/1ph-resistive-load.jpg" alt="Ammeter" width="100%">
-                        <svg style="position: relative; top: -26em; left: -3.5em; width:220px;">
-                        </svg>
+
+                </div>
+            </div>
+            <div>
+                <div class="column40">
+                    <div style="position: relative; display: flex; flex-direction: row;">
+                        <table id="table1" class="table" style="flex: 3;">
+                            <tr>
+                                <th>Sl. No.</th>
+                                <th>Speed (RPM)</th>
+                                <th>Increasing
+                                    Field Current (A)</th>
+                                <th>Induced EMF (V)</th>
+                            </tr>
+                        </table>
+                        <table id="table2" class="table" style="flex: 2;">
+                            <tr>
+                                <th style=" border-left: 0;">Decreasing
+                                    Field Current (A)
+                                </th>
+                                <th>Induced EMF (V)</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="column30">
+                    <b>Magnetization curve (OCC) of the DC generator</b>
+                    <b style="margin: 0;">(Decreasing field current)</b>
+                    <div class="container" style="position:relative;">
+                        <div class="box" id="myDiv1" style="width:350px;height:350px;"></div>
+                    </div>
+                </div>
+                <div class="column30">
+                    <b>Magnetization curve (OCC) of the DC generator</b>
+                    <b style="margin: 0;">(Increasing field current)</b>
+                    <div class="container" style="position:relative;">
+                        <div class="box" id="myDiv2" style="width:350px;height:350px;"></div>
                     </div>
                 </div>
             </div>
-
-
-
         </div>
-    </div>
-    <div>
-        <div class="column40">
-            <div style="position: relative; display: flex; flex-direction: row;">
-                <table id="table1" class="table" style="flex: 3;">
-                    <tr>
-                        <th>Sl. No.</th>
-                        <th>Speed (RPM)</th>
-                        <th>Field Current (A)</th>
-                        <th>Load Current (A)</th>
-                        <th>Terminal Voltage (V)</th>
-                    </tr>
-                </table>
-            </div>
-        </div>
-        <div class="column30">
-            <b>External Characteristics curve of the DC generator</b>
-            <b style="margin: 0;">(Decreasing field current)</b>
-            <div class="container" style="position:relative;">
-                <div class="box" id="myDiv1" style="width:350px;height:350px;"></div>
-            </div>
-        </div>
-    </div>
-    </div>
 
-    <div>
-        <div><u><B>Instructions</B></u><br>
-            <span>
-                <B>Step 1: </B>Make the proper connection by clicking the node as instructed below. If the wire is
-                misplaced, click the node number to deattach the nodes' wire. <br>
-                <table>
-                    <tr>
-                        <td><B>From</B></td>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>8</td>
-                        <td>11</td>
-                        <td>12</td>
-                        <td>11</td>
-                        <td>12</td>
-                    </tr>
-                    <tr>
-                        <td><B>To</B></td>
-                        <td>5</td>
-                        <td>6</td>
-                        <td>7</td>
-                        <td>10</td>
-                        <td>9</td>
-                        <td>13</td>
-                        <td>14</td>
-                        <td>15</td>
-                        <td>16</td>
-                    </tr>
-                </table>
-                <B>Step 2: </B>Click "Check" button.
-                <li>if connection is correct, an alert appers. Click ok. Now, go to step 4.</li>
-                <li>if connection is wrong, an alert appers. Click ok. Now, go to step 3.</li>
-                <B>Step 3: </B>Check the connection, if incorrect, click on node <b>number</b> to remove any
-                particular connection(s) or click on reset button and start from step 1.<br>
-                <B>Step 4: </B>Switch on the Power Supply<br>
-                <B>Step 5: </B>Follow the procedure<br>
-                <B>Step 6: </B> Click "Print" button, to print the full connections with graph and table in
-                landscape mode.
-
-            </span>
-            <br>
-            <br>
-            <br>
-            <br>
-        </div>
-    </div>
-    <div class="footer noPrint"
-        style="text-align: center; position: relative; top: 2em; background-color:rgb(236, 192, 126);">
         <div>
-            <p style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 12.5px;">Inspired from <a
-                    href="https://ems-iitr.vlabs.ac.in/" target="_blank">ems-iitr.vlabs.ac.in</a></p>
+            <div><u><B>Instructions</B></u><br>
+                <span>
+                    <B>Step 1: </B>Make the proper connection by clicking the node as instructed below. If the wire is
+                    misplaced, click the node number to deattach the nodes' wire. <br>
+                    <table>
+                        <tr>
+                            <td><B>From</B></td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>8</td>
+                            <td>11</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td><B>To</B></td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>10</td>
+                            <td>9</td>
+                            <td>13</td>
+                            <td>14</td>
+                        </tr>
+                    </table>
+                    <B>Step 2: </B>Click "Check" button.
+                    <li>if connection is correct, an alert appers. Click ok. Now, go to step 4.</li>
+                    <li>if connection is wrong, an alert appers. Click ok. Now, go to step 3.</li>
+                    <B>Step 3: </B>Check the connection, if incorrect, click on node <b>number</b> to remove any
+                    particular connection(s) or click on reset button and start from step 1.<br>
+                    <B>Step 4: </B>Switch on the Power Supply<br>
+                    <B>Step 5: </B>Follow the procedure<br>
+                    <B>Step 6: </B> Click "Print" button, to print the full connections with graph and table in
+                    landscape mode.
+
+                </span>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
         </div>
-    </div>
+        <div class="footer noPrint"
+            style="text-align: center; position: relative; top: 2em; background-color:rgb(236, 192, 126);">
+            <div>
+                <p style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 12.5px;">Inspired from <a
+                        href="https://ems-iitr.vlabs.ac.in/" target="_blank">ems-iitr.vlabs.ac.in</a></p>
+            </div>
+        </div>
 
     </div>
     <script src="../static/js/jsplumb1.js"></script>
-    <script src="../static/js/exp1b.js"></script>
+    <script src="../static/js/exp1a.js"></script>
 
 </body>
 
