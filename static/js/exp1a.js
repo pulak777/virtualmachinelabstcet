@@ -384,7 +384,10 @@ function mcbonoff() {
             document.getElementById('myimage2').src = '/static/images/push2.png';
             document.getElementById('myimage3').src = '/static/images/push2.png';
 
-
+            document.getElementById("line1").style.backgroundColor = "green";
+            document.getElementById("line2").style.backgroundColor = "green";
+            document.getElementById("line3").style.backgroundColor = "green";
+            document.getElementById("line4").style.backgroundColor = "green";
             rotaronoff();
         }
         else {
