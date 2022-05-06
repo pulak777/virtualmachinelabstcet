@@ -413,13 +413,11 @@ var table2 = document.querySelector('#table2');
 
 
 
-const int_speed = [0, 200, 400, 600, 800, 1000];
-const inc_field_curr = [0, 0.4, 0.8, 1.2, 1.6, 2, 2.4, 2.8, 3.2, 3.6, 4];
-const dec_field_curr = [0, 0.4, 0.8, 1.2, 1.6, 2, 2.4, 2.8, 3.2, 3.6, 4];
+const int_speed = [1300];
+const Load_Current = [0, 0.66,1.32,2.15];
+const Terminal_Voltage = [185,176,163,152];
+const Terminal_reversed_Voltage = [178,172,166,160];
 
-
-const inc_ind_emf = [10, 26, 40, 54, 66, 78, 88, 95, 102, 109, 112];
-const dec_ind_emf = [15, 31, 50, 65, 78, 85, 90, 98, 104, 110, 112];
 
 let mcboffstate = true;
 
@@ -533,9 +531,9 @@ function rangeChange2() {
     rangeShow2.value = val;
 
     if (increasing) {
-        meterShow2.value = inc_field_curr[val];
+        meterShow2.value = Load_Current[val];
         rangeClock1.style.transform = 'rotate(' + (-62 + (((meterShow2.value) * 1000) / 50)) + 'deg)';
-        meterShow3.value = inc_ind_emf[val];
+        meterShow3.value = Terminal_Voltage[val];
         rangeClock2.style.transform = 'rotate(' + (-62 + (((meterShow3.value / 20) * 1000) / 50)) + 'deg)';
         disableToggler();
         if (val == 10) {
@@ -552,9 +550,9 @@ function rangeChange2() {
         }
     }
     else {
-        meterShow2.value = dec_field_curr[val];
+        meterShow2.value = Load_Current[val];
         rangeClock1.style.transform = 'rotate(' + (-62 + (((meterShow2.value) * 1000) / 50)) + 'deg)';
-        meterShow3.value = dec_ind_emf[val];
+        meterShow3.value = Terminal_reversed_Voltage[val];
         rangeClock2.style.transform = 'rotate(' + (-62 + (((meterShow3.value / 20) * 1000) / 50)) + 'deg)';
         disableToggler();
         if (val == 0) {
@@ -622,7 +620,7 @@ function rangeChange3() {
         sliderValue++;
     }
 
-    if (val != 0 && !(val == 10 && tenthFirstCall)) {
+    if (val != 0 && !(val == 4 && tenthFirstCall)) {
         disableToggler();
     }
 }
