@@ -155,6 +155,7 @@ jsPlumb.ready(function () {
                 "source": "ld5",
                 "target": "ld1"
             },
+            //
             {
                 "source": "ld2",
                 "target": "ld6"
@@ -174,15 +175,6 @@ jsPlumb.ready(function () {
                 "target": "ld3"
             },
             {
-                "source": "ld8",
-                "target": "ld9"
-            },
-
-            {
-                "source": "ld9",
-                "target": "ld8"
-            },
-            {
                 "source": "ld4",
                 "target": "ld10"
             },
@@ -191,40 +183,74 @@ jsPlumb.ready(function () {
                 "source": "ld10",
                 "target": "ld4"
             },
+            //
             {
-                "source": "ld11",
-                "target": "ld13"
-            },
-
+                "source": "ld7",
+                "target": "ld18"
+            }, 
             {
-                "source": "ld13",
-                "target": "ld11"
-            },
+                "source": "ld18",
+                "target": "ld7"
+            }, 
+            //
             {
-                "source": "ld12",
-                "target": "ld14"
-            },
-
-            {
-                "source": "ld14",
-                "target": "ld12"
-            },
-            {
-                "source": "ld13",
+                "source": "ld8",
                 "target": "ld15"
-            },
+            }, 
             {
                 "source": "ld15",
+                "target": "ld8"
+            }, 
+            //
+            {
+                "source": "ld17",
+                "target": "ld11"
+            }, 
+            {
+                "source": "ld17",
                 "target": "ld13"
+            }, 
+            {
+                "source": "ld17",
+                "target": "ld19"
             },
+            //
+            {
+                "source": "ld11",
+                "target": "ld17"
+            },
+            //
+            {
+                "source": "ld12",
+                "target": "ld20"
+            },  
+            //
+            {
+                "source": "ld13",
+                "target": "ld17"
+            },  
             {
                 "source": "ld14",
                 "target": "ld16"
-            },
+            },  
+            //
+            {
+                "source": "ld15",
+                "target": "ld8"
+            },  
             {
                 "source": "ld16",
                 "target": "ld14"
-            }
+            },  
+            //
+            {
+                "source": "ld19",
+                "target": "ld17"
+            },  
+            {
+                "source": "ld20",
+                "target": "ld12"
+            },  
 
             
         ];
