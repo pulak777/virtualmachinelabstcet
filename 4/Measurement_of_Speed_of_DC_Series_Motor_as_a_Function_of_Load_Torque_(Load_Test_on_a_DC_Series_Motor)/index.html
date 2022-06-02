@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Determination of equivalent circuit parameters of a single phase Induction motor </title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="description" content="Determination of equivalent circuit parameters of a single phase Induction motor">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4250097576674323"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../static/css/style.css">
+    <link rel="stylesheet" href="../../static/css/4/exp5.css">
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="../../static/js/graph.ob.js"></script>
+</head>
+
+<body style="background-color: rgb(236, 228, 180);">
+    <div id="root" style="margin: 0px auto;">
+        <div id="connection-table">
+            <table>
+                <tr>
+                    <td><B>From</B></td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>7</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>11</td>
+                    <td>5</td>
+                    <td>19</td>
+                    <td>21</td>
+                    <td>2</td>
+                    <td>15</td>
+                    <td>12</td>
+                    <td>13</td>
+                </tr>
+                <tr>
+                    <td><B>To</B></td>
+                    <td>3</td>
+                    <td>6</td>
+                    <td>10</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>16</td>
+                    <td>18</td>
+                    <td>20</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>17</td>
+                    <td>16</td>
+                    <td>17</td>
+                </tr>
+            </table>
+        </div>
+        <div id="wrapper" style="position:relative; width:1360px; background-color: rgb(255, 255, 255);">
+            <div class="littledot" id="ld1"></br><a href="#" class="cmdLink detach" rel="ld1">1</a>
+            </div>
+            <div class="littledot" id="ld2"></br><a href="#" class="cmdLink detach" rel="ld2">2</a>
+            </div>
+            <div class="littledot" id="ld3"></br><a href="#" class="cmdLink detach" rel="ld3">3(L)</a>
+            </div>
+            <div class="littledot" id="ld4"></br><a href="#" class="cmdLink detach" rel="ld4">4(A)</a>
+            </div>
+            <div class="littledot" id="ld5"></br><a href="#" class="cmdLink detach" rel="ld5">5</a>
+            </div>
+            <div class="littledot" id="ld6"></br><a href="#" class="cmdLink detach" rel="ld6">6</a>
+            </div>
+            <div class="littledot" id="ld7"></br><a href="#" class="cmdLink detach" rel="ld7">7</a>
+            </div>
+            <div class="littledot" id="ld8"></br><a href="#" class="cmdLink detach" rel="ld8">8</a>
+            </div>
+            <div class="littledot" id="ld9"></br><a href="#" class="cmdLink detach" rel="ld9">9</a>
+            </div>
+            <div class="littledot" id="ld10"></br><a href="#" class="cmdLink detach" rel="ld10">10</a>
+            </div>
+            <div class="littledot" id="ld11"></br><a href="#" class="cmdLink detach" rel="ld11">11</a>
+            </div>
+            <div class="littledot" id="ld12"></br><a href="#" class="cmdLink detach" rel="ld12">12</a>
+            </div>
+
+
+            <div class="row">
+                <div class="column">
+
+                    <div class="x0" style="position: absolute; left: 1em; ">
+                        <div>
+                            <button id="check-button"
+                                style="background-color:#27D447; border:none; padding: 5px; border-radius:5px">Check</button>
+                        </div>
+                        <div>
+                            <button disabled="true"
+                                style="background-color:#27D447; border:none; padding: 5px; border-radius:5px">_____</button>
+                        </div>
+                        <div>
+                            <button disabled="true"
+                                style="background-color:#27D447; border:none; padding: 5px; border-radius:5px">_____
+                            </button>
+                        </div>
+
+                        <div>
+                            <button id="print" onclick="window.print();"
+                                style="background-color:#27D447; border:none; padding: 5px; border-radius:5px">Print
+                            </button>
+                        </div>
+
+                        <div>
+                            <button id="reset" type="reset" onclick="window.location.reload();"
+                                style="background-color:#f82d12; border:none; padding: 5px; border-radius:5px">Reset</button>
+                        </div>
+                    </div>
+                    <!--POWER SUPPLY-->
+                    <div class="x1" style="position:absolute; left: 1em; top: 13em;">
+                        <p><b>220 V,<br> DC supply</b></p>
+                        <div style="top: -1em;">
+                            <img id="myimage1" class="mcbSwitch" src="../../static/images/push1.png" alt="MCB Switch"
+                                width="25" height="25">
+                            <img id="myimage2" class="mcbSwitch" src="../../static/images/push1.png" alt="MCB Switch"
+                                width="25" height="25">
+                            <img id="myimage3" class="mcbSwitch" src="../../static/images/push1.png" alt="MCB Switch"
+                                width="25" height="25">
+                        </div>
+                        <div style="top:-1em;">
+                            <img id="myimage" class="mcbSwitch" src="../../static/images/mcboff.png" alt="MCB Switch"
+                                onclick="mcbonoff();" width="78" height="120">
+                        </div>
+                    </div>
+
+                    <!--2 POINT STARTER-->
+                    <div class="x2" style="position: absolute;left: 12em; top: 14em;">
+                        <div style="left: 1em;"><b>2-point
+                                starter</b>
+                        </div>
+                        <img style="width:12%;" class="variacBox" src="../../static/images/three point starter.jpg"
+                            alt="3 phase variac">
+                    </div>
+                    <!--VOLTMETER-->
+                    <div class="x5" style="position: absolute;left: 26em; top: 0.5em">
+                        <img style="padding-left: 60px" src="../../static/images/Voltmeter.png" alt="Wattmeter"
+                            width="170" height="200">
+                        <div class="meter2" style="position: absolute;top: -1em;left: -16em;">
+                            <div class="rang" style="position: absolute;top: -1em;left: 18.9em;">
+                                <div class="rang-title">
+                                    <input class="rang-number2" id="show4" type="text" value="0" disabled="disabled" />
+                                </div>
+                                <br>Voltmeter
+                            </div>
+                            <div>
+                                <svg class="meter" style="position: absolute;top: -10.5em;left: 16.7em;">
+                                    <polygon class="meter-clock" id="meter3" points="129,145 137,90 145,145"></polygon>
+                                    <circle class="meter-circle" r="10" cx="137" cy="145"></circle>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--AMMETER-->
+                    <div class="x4" style="position: absolute;left: 42em; top: 0.5em;">
+                        <img style="padding-left: 60px" src="../../static/images/Ammeter.png" alt="Ammeter" width="170"
+                            height="200">
+                        <div class="meter2" style="position: absolute; left: -16em; top: -1em;">
+                            <div class="rang" style="position: absolute;top: -1em;left: 18.9em;">
+                                <div class="rang-title">
+                                    <input class="rang-number2" id="show3" type="text" value="0" disabled="disabled" />
+                                </div>
+                                <br>Ammeter
+                            </div>
+                            <div>
+                                <svg class="meter" style="position: absolute;top: -10.5em;left: 16.7em;">
+                                    <polygon class="meter-clock" id="meter2" points="129,145 137,90 145,145"></polygon>
+                                    <circle class="meter-circle" r="10" cx="137" cy="145"></circle>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--1 PHASE DC MOTOR-->
+                    <div class="x6" style="position: absolute;left: 40em; top: 19.65em;">
+                        <div style="position: relative; left: 2.1em; top:-2.8em;">
+                            <img style="height:270px; width:300px;" src="../../static/images/Machine.png"
+                                id="cirmover1" />
+                            <div style="position: absolute;top:1.4em; left: 4em;"><b>Main Winding</b></div>
+                        </div>
+                    </div>
+                    <!--Weight pully-->
+                    <div class="x4" style="position: absolute;left: 57.64em; top: 4.5em;">
+                        <img style="padding-left: 60px" src="../../static/images/weight_load.png" alt="Ammeter"
+                            width="120%">
+
+                        <div class="rang" style="position: absolute;top: 7.7em;left: 4.8em;">
+                            <div class="rang-title4">
+                                <input class="rang-number4" id="show5" type="text" value="0" disabled="disabled" />
+                            </div>
+                        </div>
+
+                        <div class="rang" style="position: absolute;top: 7.7em;left: 14.4em;">
+                            <div class="rang-title4">
+                                <input class="rang-number4" id="show6" type="text" value="0" disabled="disabled" />
+                            </div>
+                        </div>
+
+                        <div style="position:relative; top: 1em; left: 9em;">
+                            <div style="position: relative; top: -0.5em;"><b>Move the slider ➤</b></div>
+
+                            <div class="rang" style="position: relative; left: -1em; top: -1em;">
+                                <div class="rang-title2">
+                                    <input class="rang-number" id="show7" type="text" value="0" disabled="disabled" />
+                                </div>
+                            </div>
+                            <div class="slidecontainer" style="position:relative; top: -2.4em; left: 1.5em;">
+                                <input class="rang-slider" disabled="true" id="range" type="range" min="0" max="9"
+                                    value="0" />
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--ROTOR VIEW-->
+                    <div class="x7" style="position: absolute;left: 65em; top: 20em;">
+                        <div style="top:1em;">
+                            <img src="../../static/images/Rotorouter.png" class="rotate1"
+                                style="position: absolute;top:3.1px;left: 10px;width:150px ;">
+                            <img src="../../static/images/Rotorinner.png" class="rotate" id="cirmover"
+                                style="position: absolute;top: 40px;left: 47.5px;width:75px;">
+                            <img id="rotor_blocker" src=""
+                                style="position: absolute;top:3.1px;left: 10px;width:150px ; opacity: 90%;">
+                        </div>
+                        <div style="top:-1em; left: 3em;"><b>Rotor View</b></div>
+                        <div class="rang" style="top: 9em;left: -1em;">
+                            <div class="rang-title">
+                                <input class="rang-number4" id="show5" type="text" value="0" disabled="disabled" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row" style="width:1360px;">
+            <div class="column50">
+                <div>
+                    <table id="table1" class="table">
+                        <tr>
+                            <th>Sl.</th>
+                            <th>Supply voltage (V)</th>
+                            <th>Supply Current (A)</th>
+                            <th>Speed (rpm)</th>
+                            <th>S<sub>1</sub> (Kg)</th>
+                            <th>S<sub>2</sub> (Kg)</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="column50">
+                <div style="position: relative; top: -0.8em;"><b>Current VS Speed plot of DC shunt motor</b></div>
+                <div class="container" style="position: relative; left: 2em;">
+                    <div class="box" id="myDiv2" style="width:560px;height:335px;"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div style="position: relative; top: 1em; ">
+            <div><u><B>Instructions</B></u><br>
+                <span>
+                    <B>Step 1: </B>Make the proper connection by clicking the node as instructed below. If the wire
+                    is
+                    misplaced, click the node number to deattach the nodes' wire. <br>
+                    <table>
+                        <tr>
+                            <td><B>From</B></td>
+                            <td>1</td>
+                            <td>4</td>
+                            <td>7</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>11</td>
+                            <td>5</td>
+                            <td>19</td>
+                            <td>21</td>
+                            <td>2</td>
+                            <td>15</td>
+                            <td>12</td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td><B>To</B></td>
+                            <td>3</td>
+                            <td>6</td>
+                            <td>10</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>16</td>
+                            <td>18</td>
+                            <td>20</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>17</td>
+                            <td>16</td>
+                            <td>17</td>
+                        </tr>
+                    </table>
+                    <B>Step 2: </B>Click "Check" button.
+                    <li>if connection is correct, an alert appers. Click ok. Now, go to step 4.</li>
+                    <li>if connection is wrong, an alert appers. Click ok. Now, go to step 3.</li>
+                    <B>Step 3: </B>Check the connection, if incorrect, click on node <b>number</b> to remove any
+                    particular connection(s) or click on reset button and start from step 1.<br>
+                    <B>Step 4: </B>Switch on the Power Supply<br>
+                    <B>Step 5: </B>Move the slider to change the Auto Transformer values<br>
+                    <B>Step 6: </B>Take readings from Wattmeter, Voltmeter, and Ammeter.<br>
+                    <B>Step 7: </B>Follow the procedure<br>
+                    <B>Step 8: </B> Click "Print" button, to print the full connections with graph and table in
+                    landscape mode.
+                    <br>
+                </span>
+            </div>
+            <script async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4250097576674323"
+                crossorigin="anonymous"></script>
+            <!-- InBetween -->
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4250097576674323"
+                data-ad-slot="5407921571" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        <div class="footer noPrint"
+            style="text-align: center; position: relative; top: 2em; background-color:rgb(236, 192, 126);">
+            <div>
+                <p style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 12.5px;">Inspired from
+                    <a href="https://ems-iitr.vlabs.ac.in/" target="_blank">ems-iitr.vlabs.ac.in</a>
+                </p>
+            </div>
+        </div>
+        <br>
+        <br>
+    </div>
+    </div>
+    <script src="../../static/js/jsplumb1.js"></script>
+    <script src="../../static/js/4/exp5.js"></script>
+</body>
+
+</html>
