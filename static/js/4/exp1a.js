@@ -94,6 +94,8 @@ jsPlumb.ready(function () {
             e12 = prepare3("ld12"),
             e13 = prepare1("ld13"),
             e14 = prepare2("ld14"),
+            e15 = prepare3("ld15"),
+            e16 = prepare1("ld16"),
             clearBtn = jsPlumb.getSelector("#anim-clear"),
             addBtn = jsPlumb.getSelector("#add");
 
@@ -176,12 +178,22 @@ jsPlumb.ready(function () {
             },
             {
                 "source": "ld4",
-                "target": "ld10"
+                "target": "ld15"
+            },
+
+            {
+                "source": "ld15",
+                "target": "ld4"
             },
 
             {
                 "source": "ld10",
-                "target": "ld4"
+                "target": "ld16"
+            },
+
+            {
+                "source": "ld16",
+                "target": "ld10"
             },
             {
                 "source": "ld11",
@@ -334,7 +346,8 @@ function disable_all() {
                 e12 = prepare3("ld12"),
                 e13 = prepare1("ld13"),
                 e14 = prepare2("ld14"),
-
+                e15 = prepare3("ld15"),
+                e16 = prepare1("ld16"),
                 clearBtn = jsPlumb.getSelector("#anim-clear"),
                 addBtn = jsPlumb.getSelector("#add");
         });
@@ -484,7 +497,7 @@ function rangeChange2() {
 
     if (increasing) {
         meterShow2.value = inc_field_curr[val];
-        rangeClock1.style.transform = 'rotate(' + (-62 + (((meterShow2.value) * 1000) / 50)) + 'deg)';
+        rangeClock1.style.transform = 'rotate(' + (-62 + (meterShow3.value / 10)) + 'deg)';
         meterShow3.value = inc_ind_emf[val];
         rangeClock2.style.transform = 'rotate(' + (-62 + (((meterShow3.value / 20) * 1000) / 50)) + 'deg)';
         disableToggler();
@@ -503,7 +516,7 @@ function rangeChange2() {
     }
     else {
         meterShow2.value = dec_field_curr[val];
-        rangeClock1.style.transform = 'rotate(' + (-62 + (((meterShow2.value) * 1000) / 50)) + 'deg)';
+        rangeClock1.style.transform = 'rotate(' + (-62 + (((meterShow3.value / 20) * 100) / 50)) + 'deg)';
         meterShow3.value = dec_ind_emf[val];
         rangeClock2.style.transform = 'rotate(' + (-62 + (((meterShow3.value / 20) * 1000) / 50)) + 'deg)';
         disableToggler();

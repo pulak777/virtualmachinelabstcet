@@ -75,20 +75,20 @@ body > div:nth-child(3) {
 }
 /* */
 #ld7 {
-  top: 25.6em;
-  left: 48.5em;
+  top: 28em;
+  left: 36.5em;
 }
 #ld8 {
-  top: 25.6em;
-  left: 52.5em;
+  top: 28em;
+  left: 41em;
 }
 /* */
 #ld9 {
-  top: 18em;
+  top: 16em;
   left: 58em;
 }
 #ld10 {
-  top: 18em;
+  top: 16em;
   left: 64em;
 }
 #ld11 {
@@ -109,6 +109,14 @@ body > div:nth-child(3) {
   left: 81.5em;
 }
 /* */
+#ld15 {
+  top: 26em;
+  left: 54em;
+}
+#ld16 {
+  top: 24em;
+  left: 67.5em;
+}
 
 path,
 .jtk-endpoint {

@@ -26,8 +26,9 @@
                     <td>1</td>
                     <td>2</td>
                     <td>3</td>
-                    <td>4</td>
                     <td>8</td>
+                    <td>10</td>
+                    <td>4</td>
                     <td>11</td>
                     <td>12</td>
                 </tr>
@@ -36,8 +37,9 @@
                     <td>5</td>
                     <td>6</td>
                     <td>7</td>
-                    <td>10</td>
                     <td>9</td>
+                    <td>16</td>
+                    <td>15</td>
                     <td>13</td>
                     <td>14</td>
                 </tr>
@@ -60,19 +62,22 @@
             </div>
             <div class="littledot" id="ld8"></br><a href="#" class="detach" rel="ld8">8</a>
             </div>
-            <div class="littledot" id="ld9"></br><a href="#" class="detach" rel="ld9">9</a>
+            <div class="littledot" id="ld9"></br><a href="#" class="detach" rel="ld9">9 (F1)</a>
             </div>
-            <div class="littledot" id="ld10"></br><a href="#" class="detach" rel="ld10">10</a>
+            <div class="littledot" id="ld10"></br><a href="#" class="detach" rel="ld10">10 (F2)</a>
             </div>
-            <div class="littledot" id="ld11"></br><a href="#" class="detach" rel="ld11">11</a>
+            <div class="littledot" id="ld11"></br><a href="#" class="detach" rel="ld11">11 (A1)</a>
             </div>
-            <div class="littledot" id="ld12"></br><a href="#" class="detach" rel="ld12">12</a>
+            <div class="littledot" id="ld12"></br><a href="#" class="detach" rel="ld12">12 (A2)</a>
             </div>
             <div class="littledot" id="ld13"></br><a href="#" class="detach" rel="ld13">13</a>
             </div>
             <div class="littledot" id="ld14"></br><a href="#" class="detach" rel="ld14">14</a>
             </div>
-
+            <div class="littledot" id="ld15"></br><a href="#" class="detach" rel="ld15">15</a>
+            </div>
+            <div class="littledot" id="ld16"></br><a href="#" class="detach" rel="ld16">16</a>
+            </div>
 
             <div>
                 <div class="column">
@@ -203,8 +208,17 @@
                             [1 HP, 220V, I<sub>a</sub>=5.1A, I<sub>f</sub>=0.55A, 1500 RPM
                         </h5>
                         <img src="../../static/images/dc_generator.png" alt="" style="width: 95%;">
+
+
+                    </div>
+
+
+                    <!--Rheostat-->
+
+                    <div style="position: absolute; left: 55em; top:23em;">
+                        <img style="width: 200px;" src="../../static/images/Rheostat_crop.png" id="cirmover1" />
                         <div style="display: flex; flex-direction: row; justify-content: space-around;">
-                            <div class="rang" style="position: relative; left: 1em; top: -1em;">
+                            <div class="rang" style="position: relative; left: 1em; top: -1.2em;">
                                 <div class="rang-title2">
                                     <input class="rang-number2" id="show2" type="text" value="0" disabled="disabled" />
                                 </div>
@@ -214,23 +228,25 @@
                                     value="0" />
                             </div>
                         </div>
-
                     </div>
 
 
+
+
                     <!--AMMETER-->
-                    <div style="position: absolute;left: 46em; top: 17em; width: 160px; height: 140px;">
+                    <div style="position: absolute;left: 34em; top: 19em; width: 160px; height: 140px;">
                         <img src="../../static/images/Ammeter.png" alt="Ammeter" width="100%">
                         <div class="meter2" style="position: relative;">
-                            <div class="rang" style="z-index: 100; position: relative; top: -13em; left: -1em;">
+                            <div class="rang" style="z-index: 100; position: relative; top: -13.5em; left: -1em;">
                                 <div class="rang-title">
                                     <input class="rang-numberL" id="show02" type="text" value="0" disabled="disabled" />
                                 </div>
                             </div>
                             <div>
-                                <svg style="position: relative; top: -25em; left: -3.5em; width:220px;">
-                                    <polygon class="meter-clock" id="meter1" points="132,150 137,100 143,150"></polygon>
-                                    <circle class="meter-circle" r="6" cx="137" cy="145"></circle>
+                                <svg style="position: relative; top: -22em; left: -3.5em;">
+                                    <polygon class="meter-clock" id="meter1" points="182,116 180,72 176,116">
+                                    </polygon>
+                                    <circle class="meter-circle" r="8" cx="136.5" cy="97"></circle>
                                 </svg>
                             </div>
                         </div>
@@ -260,23 +276,28 @@
             <div>
                 <div class="column40">
                     <div style="position: relative; display: flex; flex-direction: row;">
-                        <table id="table1" class="table" style="flex: 3;">
-                            <tr>
-                                <th>Sl. No.</th>
-                                <th>Speed (RPM)</th>
-                                <th>Increasing
-                                    Field Current (A)</th>
-                                <th>Induced EMF (V)</th>
-                            </tr>
-                        </table>
-                        <table id="table2" class="table" style="flex: 2;">
-                            <tr>
-                                <th style=" border-left: 0;">Decreasing
-                                    Field Current (A)
-                                </th>
-                                <th>Induced EMF (V)</th>
-                            </tr>
-                        </table>
+                        <div>
+                            <table id="table1" class="table">
+                                <tr style="height: 90px;">
+                                    <th>Sl. No.</th>
+                                    <th>Speed (RPM)</th>
+                                    <th>Increasing
+                                        Field Current (A)</th>
+                                    <th>Induced EMF (V)</th>
+                                </tr>
+                            </table>
+                        </div>
+                        <div>
+                            <table id="table2" class="table">
+                                <tr style="height: 90px;">
+                                    <th style=" border-left: 0;">Decreasing
+                                        Field Current (A)
+                                    </th>
+                                    <th>Induced EMF (V)</th>
+                                </tr>
+                            </table>
+                        </div>
+
                     </div>
                 </div>
                 <div class="column30">
@@ -296,7 +317,7 @@
             </div>
         </div>
 
-        <div>
+        <div style="margin-top: 40px;">
             <div><u><B>Instructions</B></u><br>
                 <span>
                     <B>Step 1: </B>Make the proper connection by clicking the node as instructed below. If the wire is
@@ -307,8 +328,9 @@
                             <td>1</td>
                             <td>2</td>
                             <td>3</td>
-                            <td>4</td>
                             <td>8</td>
+                            <td>10</td>
+                            <td>4</td>
                             <td>11</td>
                             <td>12</td>
                         </tr>
@@ -317,8 +339,9 @@
                             <td>5</td>
                             <td>6</td>
                             <td>7</td>
-                            <td>10</td>
                             <td>9</td>
+                            <td>16</td>
+                            <td>15</td>
                             <td>13</td>
                             <td>14</td>
                         </tr>

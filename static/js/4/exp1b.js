@@ -222,7 +222,7 @@ jsPlumb.ready(function () {
                 "target": "ld14"
             }
         ];
-        var correct_connections_20_18 = [
+        var correct_connections_18_20 = [
             {
                 "source": "ld20",
                 "target": "ld18"
@@ -303,6 +303,15 @@ jsPlumb.ready(function () {
                 "target": "ld5"
             },
             {
+                "source": "ld6",
+                "target": "ld15"
+            },
+
+            {
+                "source": "ld15",
+                "target": "ld6"
+            },
+            {
                 "source": "ld16",
                 "target": "ld12"
             },
@@ -358,7 +367,16 @@ jsPlumb.ready(function () {
 
         var is_connected_1_7 = false;
         var is_connected_2_8 = false;
+        var is_connected_3_9 = false;
+        var is_connected_4_10 = false;
+        var is_connected_5_11 = false;
+        var is_connected_6_15 = false;
+        var is_connected_16_12 = false;
         var is_connected_13_17 = false;
+        var is_connected_14_19 = false;
+        var is_connected_18_20 = false;
+        var is_connected_21_19 = false;
+        var is_connected_22_20 = false;
         var unallowed_connection_present = false;
 
         actual_connections.forEach(function (connection) {
@@ -379,8 +397,63 @@ jsPlumb.ready(function () {
                 });
             }
 
+            if (!is_connected_3_9) {
+                is_connected_3_9 = correct_connections_3_9.find(function (conn) {
+                    return conn.source === this_connection.source && conn.target === this_connection.target;
+                });
+            }
+
+            if (!is_connected_4_10) {
+                is_connected_4_10 = correct_connections_4_10.find(function (conn) {
+                    return conn.source === this_connection.source && conn.target === this_connection.target;
+                });
+            }
+
+            if (!is_connected_5_11) {
+                is_connected_5_11 = correct_connections_5_11.find(function (conn) {
+                    return conn.source === this_connection.source && conn.target === this_connection.target;
+                });
+            }
+
+            if (!is_connected_6_15) {
+                is_connected_6_15 = correct_connections_6_15.find(function (conn) {
+                    return conn.source === this_connection.source && conn.target === this_connection.target;
+                });
+            }
+
+            if (!is_connected_16_12) {
+                is_connected_16_12 = correct_connections_16_12.find(function (conn) {
+                    return conn.source === this_connection.source && conn.target === this_connection.target;
+                });
+            }
+
+
             if (!is_connected_13_17) {
                 is_connected_13_17 = correct_connections_13_17.find(function (conn) {
+                    return conn.source === this_connection.source && conn.target === this_connection.target;
+                });
+            }
+
+            if (!is_connected_14_19) {
+                is_connected_14_19 = correct_connections_14_19.find(function (conn) {
+                    return conn.source === this_connection.source && conn.target === this_connection.target;
+                });
+            }
+
+            if (!is_connected_18_20) {
+                is_connected_18_20 = correct_connections_18_20.find(function (conn) {
+                    return conn.source === this_connection.source && conn.target === this_connection.target;
+                });
+            }
+
+            if (!is_connected_21_19) {
+                is_connected_21_19 = correct_connections_21_19.find(function (conn) {
+                    return conn.source === this_connection.source && conn.target === this_connection.target;
+                });
+            }
+
+            if (!is_connected_22_20) {
+                is_connected_22_20 = correct_connections_22_20.find(function (conn) {
                     return conn.source === this_connection.source && conn.target === this_connection.target;
                 });
             }
@@ -393,7 +466,7 @@ jsPlumb.ready(function () {
         });
 
         //short cut can be used for debugging
-        if (is_connected_13_17 && !unallowed_connection_present) {
+        if (is_connected_1_7 && is_connected_2_8 && is_connected_3_9 && is_connected_4_10 && is_connected_5_11 && is_connected_6_15 && is_connected_14_19 && is_connected_16_12 && is_connected_18_20 && is_connected_21_19 && is_connected_22_20 && is_connected_13_17 && !unallowed_connection_present) {
             alert("𝐀𝐥𝐞𝐫𝐭 ! 𝐂𝐨𝐫𝐫𝐞𝐜𝐭 𝐜𝐨𝐧𝐧𝐞𝐜𝐭𝐢𝐨𝐧 𝐩𝐫𝐨𝐜𝐞𝐞𝐝 𝐭𝐨 𝐭𝐚𝐤𝐞 𝐫𝐞𝐚𝐝𝐢𝐧𝐠.");
             document.getElementById("check-button").disabled = true;
             rightconnection = true;
