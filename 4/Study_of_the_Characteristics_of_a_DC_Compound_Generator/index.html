@@ -22,14 +22,22 @@
             misplaced, click the node number to deattach the nodes' wire. <br>
             <table>
                 <tr>
+                    <b>series field terminals not reversed</b>
+                </tr>
+                <tr>
                     <td><B>From</B></td>
                     <td>1</td>
                     <td>2</td>
                     <td>3</td>
                     <td>4</td>
-                    <td>8</td>
-                    <td>11</td>
-                    <td>12</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td><b>11</b></td>
+                    <td><b>14</b></td>
+                    <td>16</td>
+                    <td>20</td>
+                    <td>19</td>
+                    <td>20</td>
                 </tr>
                 <tr>
                     <td><B>To</B></td>
@@ -37,9 +45,14 @@
                     <td>6</td>
                     <td>7</td>
                     <td>8</td>
-                    <td>9</td>
-                    <td>13</td>
-                    <td>14</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td><b>13</b></td>
+                    <td><b>15</b></td>
+                    <td>19</td>
+                    <td>12</td>
+                    <td>17</td>
+                    <td>18</td>
                 </tr>
             </table>
         </div>
@@ -96,7 +109,7 @@
                                 style="background-color:#27D447; border:none; margin: 5px; padding: 5px; border-radius:5px">Check</button>
                         </div>
                         <div>
-                            <button class="addButtonClass" id="add" disabled="true" onclick="rangeChange3()" style="
+                            <button class="addButtonClass" id="addToTable" disabled="true" style="
                             border:none; margin: 5px; padding: 5px; border-radius:5px">Add
                                 to
                                 table</button>
@@ -190,7 +203,7 @@
                                 </div>
                             </div>
                             <div style="margin-left: 1em;">
-                                <input class="rang-slider" disabled="true" id="range1" type="range" min="0" max="8"
+                                <input class="rang-slider" disabled="true" id="range1" type="range" min="0" max="5"
                                     value="0" />
                             </div>
                         </div>
@@ -214,7 +227,7 @@
 
                     <!--Linker-->
                     <div
-                        style="background-color: #000000; position: absolute; left: 41em; top: 10.3em; width: 175px; height: 20px; z-index: 100; border-radius: 5px;">
+                        style="background-color: #000000; position: absolute; left: 41em; top: 10.6em; width: 175px; height: 10px; z-index: 100; border-radius: 5px;">
                     </div>
 
                     <!--DC motor-->
@@ -225,32 +238,20 @@
                         -ms-transform: scaleX(-1);
                         -o-transform: scaleX(-1);
                         transform: scaleX(-1);">
-                        <div style="display: flex; flex-direction: row; justify-content: space-around;">
-                            <div class="rang" style="position: relative; left: 1em; top: -1em;">
-                                <div class="rang-title2">
-                                    <input class="rang-number2" id="show2" type="text" value="0" disabled="disabled" />
-                                </div>
-                            </div>
-                            <div>
-                                <input class="rang-slider" disabled="true" id="range2" type="range" min="0" max="10"
-                                    value="0" />
-                            </div>
-                        </div>
-
                     </div>
 
 
                     <!--AMMETER-->
                     <div style="position: absolute;left: 70em; top: 0em; width: 160px; height: 140px;">
                         <img src="../../static/images/Ammeter.png" alt="Ammeter" width="100%">
-                        <div class="meter2" style="position: relative; top: 0.2em;">
+                        <div class="meter2" style="position: relative; top: 0em;">
                             <div class="rang" style="z-index: 100; position: relative; top: -13em; left: -1em;">
                                 <div class="rang-title">
                                     <input class="rang-numberL" id="show02" type="text" value="0" disabled="disabled" />
                                 </div>
                             </div>
                             <div>
-                                <svg style="position: relative; top: -25em; left: -3.5em; width:220px;">
+                                <svg style="position: relative; top: -24.8em; left: -3.5em; width:220px;">
                                     <polygon class="meter-clock" id="meter1" points="133,140 137,90 145,150"></polygon>
                                     <circle class="meter-circle" r="8" cx="137" cy="145"></circle>
                                 </svg>
@@ -261,14 +262,14 @@
                     <!--VOLTMETER-->
                     <div style="position: absolute;left: 70em;top: 12em; width: 160px; height: 150px;">
                         <img src="../../static/images/Voltmeter.png" alt="Ammeter" width="100%">
-                        <div class="meter2" style="position: relative; top: 1em; left: -0.4em;">
+                        <div class="meter2" style="position: relative; top: 0.65em; left: -0.4em;">
                             <div class="rang" style="z-index: 100; position: relative; top: -14em; left: -0.5em;">
                                 <div class="rang-title">
                                     <input class="rang-numberL" id="show03" type="text" value="0" disabled="disabled" />
                                 </div>
                             </div>
                             <div>
-                                <svg style="position: relative; top: -25.6em; left: -2.9em; width: 220px">
+                                <svg style="position: relative; top: -25.5em; left: -2.9em; width: 220px">
                                     <polygon class="meter-clock" id="meter2" points="133,140 137,90 145,150"></polygon>
                                     <circle class="meter-circle" r="8" cx="137" cy="145"></circle>
                                 </svg>
@@ -286,7 +287,7 @@
                                 </div>
                             </div>
                             <div>
-                                <input class="rang-slider" disabled="true" id="range2" type="range" min="0" max="10"
+                                <input class="rang-slider" disabled="true" id="range2" type="range" min="0" max="5"
                                     value="0" />
                             </div>
                         </div>
@@ -296,7 +297,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="column50">
+                <div class="column50" style="height: 200px;">
                     <h3 style="margin: 0;">With series field terminals not reversed</h3>
                     <div style="position: relative; display: flex; flex-direction: row;">
                         <table id="table1" class="table" style="flex: 3;">
@@ -309,7 +310,7 @@
                         </table>
                     </div>
                 </div>
-                <div class="column50">
+                <div class="column50" style="height: 200px;">
                     <h3 style="margin: 0;">With series field terminals reversed</h3>
                     <div style="position: relative; display: flex; flex-direction: row;">
                         <table id="table2" class="table" style="flex: 3;">
@@ -341,31 +342,79 @@
             </div>
         </div>
 
-        <div>
+        <div style="margin-top: 10px;">
             <div><u><B>Instructions</B></u><br>
                 <span>
                     <B>Step 1: </B>Make the proper connection by clicking the node as instructed below. If the wire is
                     misplaced, click the node number to deattach the nodes' wire. <br>
                     <table>
                         <tr>
+                            <b>series field terminals not reversed</b>
+                        </tr>
+                        <tr>
                             <td><B>From</B></td>
                             <td>1</td>
                             <td>2</td>
                             <td>3</td>
                             <td>4</td>
-                            <td>8</td>
-                            <td>11</td>
-                            <td>12</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td><b>11</b></td>
+                            <td><b>14</b></td>
+                            <td>16</td>
+                            <td>20</td>
+                            <td>19</td>
+                            <td>20</td>
                         </tr>
                         <tr>
                             <td><B>To</B></td>
                             <td>5</td>
                             <td>6</td>
                             <td>7</td>
-                            <td>10</td>
+                            <td>8</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td><b>13</b></td>
+                            <td><b>15</b></td>
+                            <td>19</td>
+                            <td>12</td>
+                            <td>17</td>
+                            <td>18</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <b>series field terminals reversed</b>
+                        </tr>
+                        <tr>
+                            <td><B>From</B></td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
                             <td>9</td>
-                            <td>13</td>
-                            <td>14</td>
+                            <td>10</td>
+                            <td><b>11</b></td>
+                            <td><b>13</b></td>
+                            <td>16</td>
+                            <td>20</td>
+                            <td>19</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td><B>To</B></td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td><b>14</b></td>
+                            <td><b>15</b></td>
+                            <td>19</td>
+                            <td>12</td>
+                            <td>17</td>
+                            <td>18</td>
                         </tr>
                     </table>
                     <B>Step 2: </B>Click "Check" button.
