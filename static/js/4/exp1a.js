@@ -646,4 +646,6 @@ function drawgraph() {
 
     Plotly.newPlot('myDiv1', data1, layout1, { showSendToCloud: true });
     Plotly.newPlot('myDiv2', data2, layout2, { showSendToCloud: true });
+
+    document.getElementById("graph").disabled = true;
 }
