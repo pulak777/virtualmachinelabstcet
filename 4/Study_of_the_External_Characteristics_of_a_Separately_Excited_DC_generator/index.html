@@ -108,7 +108,7 @@
                                 style="background-color:#27D447; border:none; margin: 5px; padding: 5px; border-radius:5px">Check</button>
                         </div>
                         <div>
-                            <button class="addButtonClass" id="add" disabled="true" onclick="rangeChange3()" style="
+                            <button class="addButtonClass" id="add" disabled="true" onclick="addToTable()" style="
                             border:none; margin: 5px; padding: 5px; border-radius:5px">Add
                                 to
                                 table</button>
@@ -231,18 +231,6 @@
                             [3 HP, 220V, I<sub>a</sub>=12.4A, I<sub>f</sub>=0.86A, 1500 RPM
                         </h5>
                         <img src="../../static/images/dc_generator.png" alt="" style="width: 95%;">
-                        <div style="display: flex; flex-direction: row; justify-content: space-around;">
-                            <div class="rang" style="position: relative; left: 1em; top: -1em;">
-                                <div class="rang-title2">
-                                    <input class="rang-number2" id="show2" type="text" value="0" disabled="disabled" />
-                                </div>
-                            </div>
-                            <div>
-                                <input class="rang-slider" disabled="true" id="range2" type="range" min="0" max="10"
-                                    value="0" />
-                            </div>
-                        </div>
-
                     </div>
 
 
@@ -305,11 +293,11 @@
                         <div style="display: flex; flex-direction: row; justify-content: space-between;">
                             <div class="rang" style="position: relative; top: -1em;">
                                 <div class="rang-title2">
-                                    <input class="rang-number2" id="show3" type="text" value="0" disabled="disabled" />
+                                    <input class="rang-number2" id="show2" type="text" value="0" disabled="disabled" />
                                 </div>
                             </div>
                             <div>
-                                <input class="rang-slider" disabled="true" id="range3" type="range" min="0" max="10"
+                                <input class="rang-slider" disabled="true" id="range2" type="range" min="0" max="10"
                                     value="0" />
                             </div>
                         </div>

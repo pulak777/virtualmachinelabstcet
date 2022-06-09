@@ -92,11 +92,11 @@ body {
   }
   /* */
   #ld11 {
-    top: 26em;
+    top: 25em;
     left: 58em;
   }
   #ld12 {
-    top: 26em;
+    top: 25em;
     left: 64em;
   }
   #ld13 {
@@ -363,7 +363,7 @@ body {
   .dc-generator {
     position: absolute;
     left: 55em;
-    top: 8.5em;
+    top: 8.8em;
     background-color: white;
     width: 200px;
     height: 235px;
