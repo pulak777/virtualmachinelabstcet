@@ -47,39 +47,39 @@ body > div:nth-child(3) {
 
 /** ELEMENT POSITIONS **/
 #ld1 {
-  top: 12.1em;
-  left: 1.5em;
+  top: 16em;
+  left: 1.9em;
 }
 
 #ld2 {
-  top: 12.1em;
+  top: 16em;
   left: 5.5em;
 }
 /**voltmeter**/
 #ld3 {
-  top: 11.5em;
+  top: 11em;
   left: 14em;
 }
 #ld4 {
-  top: 11.5em;
+  top: 11em;
   left: 20.5em;
 }
 /**Ammeter**/
 #ld5 {
-  top: 12.1em;
+  top: 11.5em;
   left: 29.2em;
 }
 #ld6 {
-  top: 12.1em;
+  top: 11.5em;
   left: 35em;
 }
 /**Ammeter**/
 #ld7 {
-  top: 23em;
+  top: 23.5em;
   left: 14em;
 }
 #ld8 {
-  top: 23em;
+  top: 23.5em;
   left: 20.4em;
 }
 /**rheostat**/
@@ -93,23 +93,23 @@ body > div:nth-child(3) {
 }
 /**--------**/
 #ld11 {
-  top: 6.72em;
+  top: 14em;
   left: 46em;
 }
 
 #ld12 {
-  top: 11.77em;
+  top: 18em;
   left: 46em;
 }
 
 #ld13 {
-  top: 14.72em;
-  left: 49em;
+  top: 21.5em;
+  left: 49.5em;
 }
 
 #ld14 {
-  top: 14.77em;
-  left: 55em;
+  top: 21.5em;
+  left: 54.5em;
 }
 
 path,
@@ -136,8 +136,9 @@ div {
   float: left;
   width: 42%;
   padding: 10px;
-  height: 400px;
+  height: 420px;
   border-style: solid;
+  border-right: none;
   color: #222d32;
 }
 .column48 {
@@ -184,7 +185,7 @@ div {
   float: left;
   width: 24%;
   padding: 10px;
-  height: 400px;
+  height: 420px;
   border-style: solid;
   color: #222d32;
 }
@@ -228,20 +229,44 @@ div {
   border-style: solid;
   color: #222d32;
 }
-.column41 {
+.column40 {
   float: left;
-  width: 41%;
+  width: 40%;
   padding: 10px;
-  height: 300px;
+  height: 320px;
   border-style: solid;
+  border-top: none;
+  color: #222d32;
+}
+
+.column8 {
+  float: left;
+  width: 8%;
+  padding: 10px;
+  height: 320px;
+  border-style: solid;
+  border-top: none;
+  border-right: none;
+  color: #222d32;
+}
+
+.column12 {
+  float: left;
+  width: 12%;
+  padding: 10px;
+  height: 320px;
+  border-style: solid;
+  border-top: none;
+  border-right: none;
   color: #222d32;
 }
 .column10 {
   float: left;
   width: 10%;
   padding: 10px;
-  height: 400px;
+  height: 420px;
   border-style: solid;
+  border-right: none;
   color: #222d32;
 }
 .slidecontainer {

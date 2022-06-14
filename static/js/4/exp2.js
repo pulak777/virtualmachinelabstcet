@@ -63,7 +63,7 @@ jsPlumb.ready(function () {
             dropOptions: { tolerance: "touch", hoverClass: "dropHover" }
         },
         endpoint4 = {
-            anchor: [0.5, 0.5, 3, 5.5],
+            anchor: [0.5, 0.5, 5.5, 4],
             connectorStyle: { strokeWidth: 4, stroke: "rgba(0,255,255)" },
             endpointsOnTop: true,
             isSource: true,
@@ -125,7 +125,7 @@ jsPlumb.ready(function () {
             e6 = prepare2("ld6"),
             e7 = prepare3("ld7"),
             e8 = prepare3("ld8"),
-            e9 = prepare1("ld9"),
+            e9 = prepare3("ld9"),
             e10 = prepare3("ld10"),
             e11 = prepare2("ld11"),
             e12 = prepare3("ld12"),
@@ -173,69 +173,80 @@ jsPlumb.ready(function () {
                 "target": "ld2"
             }
         ];
-        var correct_connections_3_12 = [
+        var correct_connections_4_12 = [
             {
                 "source": "ld12",
-                "target": "ld3"
+                "target": "ld4"
             },
 
             {
-                "source": "ld3",
+                "source": "ld4",
                 "target": "ld12"
             }
         ];
-        var correct_connections_4_5 = [
+        var correct_connections_3_5 = [
             {
-                "source": "ld4",
+                "source": "ld3",
                 "target": "ld5"
             },
 
             {
                 "source": "ld5",
-                "target": "ld4"
+                "target": "ld3"
             }
         ];
-        var correct_connections_6_7 = [
+        var correct_connections_6_11 = [
             {
                 "source": "ld6",
-                "target": "ld7"
-            },
-
-            {
-                "source": "ld7",
-                "target": "ld6"
-            }
-        ];
-        var correct_connections_7_8 = [
-            {
-                "source": "ld7",
-                "target": "ld8"
-            },
-
-            {
-                "source": "ld8",
-                "target": "ld7"
-            }
-        ];
-        var correct_connections_9_11 = [
-            {
-                "source": "ld9",
                 "target": "ld11"
             },
 
             {
                 "source": "ld11",
-                "target": "ld9"
+                "target": "ld6"
             }
         ];
-        var correct_connections_10_12 = [
+        var correct_connections_1_14 = [
             {
-                "source": "ld10",
-                "target": "ld12"
+                "source": "ld1",
+                "target": "ld14"
             },
 
             {
-                "source": "ld12",
+                "source": "ld14",
+                "target": "ld1"
+            }
+        ];
+        var correct_connections_2_7 = [
+            {
+                "source": "ld2",
+                "target": "ld7"
+            },
+
+            {
+                "source": "ld7",
+                "target": "ld2"
+            }
+        ];
+        var correct_connections_8_9 = [
+            {
+                "source": "ld9",
+                "target": "ld8"
+            },
+
+            {
+                "source": "ld8",
+                "target": "ld9"
+            }
+        ];
+        var correct_connections_10_13 = [
+            {
+                "source": "ld10",
+                "target": "ld13"
+            },
+
+            {
+                "source": "ld13",
                 "target": "ld10"
             }
         ];
@@ -263,51 +274,59 @@ jsPlumb.ready(function () {
             },
             {
                 "source": "ld12",
-                "target": "ld3"
+                "target": "ld4"
             },
 
             {
-                "source": "ld3",
+                "source": "ld4",
                 "target": "ld12"
             },
             {
-                "source": "ld4",
+                "source": "ld3",
                 "target": "ld5"
             },
             {
                 "source": "ld5",
-                "target": "ld4"
+                "target": "ld3"
             },
             {
                 "source": "ld6",
-                "target": "ld7"
-            },
-            {
-                "source": "ld7",
-                "target": "ld6"
-            },
-            {
-                "source": "ld7",
-                "target": "ld8"
-            },
-            {
-                "source": "ld8",
-                "target": "ld7"
-            },
-            {
-                "source": "ld9",
                 "target": "ld11"
             },
             {
                 "source": "ld11",
+                "target": "ld6"
+            },
+            {
+                "source": "ld1",
+                "target": "ld14"
+            },
+            {
+                "source": "ld14",
+                "target": "ld1"
+            },
+            {
+                "source": "ld2",
+                "target": "ld7"
+            },
+            {
+                "source": "ld7",
+                "target": "ld2"
+            },
+            {
+                "source": "ld8",
                 "target": "ld9"
             },
             {
-                "source": "ld10",
-                "target": "ld12"
+                "source": "ld9",
+                "target": "ld8"
             },
             {
-                "source": "ld12",
+                "source": "ld10",
+                "target": "ld13"
+            },
+            {
+                "source": "ld13",
                 "target": "ld10"
             }
         ];
@@ -316,12 +335,13 @@ jsPlumb.ready(function () {
 
         var is_connected_1_3 = false;
         var is_connected_2_4 = false;
-        var is_connected_3_12 = false;
-        var is_connected_4_5 = false;
-        var is_connected_6_7 = false;
-        var is_connected_7_8 = false;
-        var is_connected_9_11 = false;
-        var is_connected_10_12 = false;
+        var is_connected_4_12 = false;
+        var is_connected_3_5 = false;
+        var is_connected_6_11 = false;
+        var is_connected_1_14 = false;
+        var is_connected_2_7 = false;
+        var is_connected_8_9 = false;
+        var is_connected_10_13 = false;
         var unallowed_connection_present = false;
 
         actual_connections.forEach(function (connection) {
@@ -368,8 +388,8 @@ jsPlumb.ready(function () {
                 "target": connection.targetId
             };
 
-            if (!is_connected_3_12) {
-                is_connected_3_12 = correct_connections_3_12.find(function (conn) {
+            if (!is_connected_4_12) {
+                is_connected_4_12 = correct_connections_4_12.find(function (conn) {
                     return conn.source === this_connection.source && conn.target === this_connection.target;
                 });
             }
@@ -387,8 +407,8 @@ jsPlumb.ready(function () {
                 "target": connection.targetId
             };
 
-            if (!is_connected_4_5) {
-                is_connected_4_5 = correct_connections_4_5.find(function (conn) {
+            if (!is_connected_3_5) {
+                is_connected_3_5 = correct_connections_3_5.find(function (conn) {
                     return conn.source === this_connection.source && conn.target === this_connection.target;
                 });
             }
@@ -406,8 +426,8 @@ jsPlumb.ready(function () {
                 "target": connection.targetId
             };
 
-            if (!is_connected_6_7) {
-                is_connected_6_7 = correct_connections_6_7.find(function (conn) {
+            if (!is_connected_6_11) {
+                is_connected_6_11 = correct_connections_6_11.find(function (conn) {
                     return conn.source === this_connection.source && conn.target === this_connection.target;
                 });
             }
@@ -424,8 +444,8 @@ jsPlumb.ready(function () {
                 "target": connection.targetId
             };
 
-            if (!is_connected_7_8) {
-                is_connected_7_8 = correct_connections_7_8.find(function (conn) {
+            if (!is_connected_1_14) {
+                is_connected_1_14 = correct_connections_1_14.find(function (conn) {
                     return conn.source === this_connection.source && conn.target === this_connection.target;
                 });
             }
@@ -443,8 +463,8 @@ jsPlumb.ready(function () {
                 "target": connection.targetId
             };
 
-            if (!is_connected_9_11) {
-                is_connected_9_11 = correct_connections_9_11.find(function (conn) {
+            if (!is_connected_2_7) {
+                is_connected_2_7 = correct_connections_2_7.find(function (conn) {
                     return conn.source === this_connection.source && conn.target === this_connection.target;
                 });
             }
@@ -461,11 +481,28 @@ jsPlumb.ready(function () {
                 "target": connection.targetId
             };
 
-            if (!is_connected_10_12) {
-                is_connected_10_12 = correct_connections_10_12.find(function (conn) {
+            if (!is_connected_8_9) {
+                is_connected_8_9 = correct_connections_8_9.find(function (conn) {
                     return conn.source === this_connection.source && conn.target === this_connection.target;
                 });
             }
+            if (!unallowed_connection_present) {
+                unallowed_connection_present = !(allowed_connections.find(function (conn) {
+                    return conn.source === this_connection.source && conn.target === this_connection.target;
+                }));
+            }
+        });
+        actual_connections.forEach(function (connection) {
+            var this_connection = {
+                "source": connection.sourceId,
+                "target": connection.targetId
+            };
+            if (!is_connected_10_13) {
+                is_connected_10_13 = correct_connections_10_13.find(function (conn) {
+                    return conn.source === this_connection.source && conn.target === this_connection.target;
+                });
+            }
+
 
             if (!unallowed_connection_present) {
                 unallowed_connection_present = !(allowed_connections.find(function (conn) {
@@ -473,9 +510,8 @@ jsPlumb.ready(function () {
                 }));
             }
         });
-        //removed for faster debugging
-        //is_connected_2_4 && is_connected_3_12 && is_connected_4_5 && is_connected_6_7 && is_connected_7_8 && is_connected_9_11 && is_connected_10_12 &&
-        if (is_connected_10_12 && !unallowed_connection_present) {
+
+        if (is_connected_1_3 && is_connected_2_4 && is_connected_4_12 && is_connected_3_5 && is_connected_6_11 && is_connected_1_14 && is_connected_2_7 && is_connected_8_9 && is_connected_10_13 && !unallowed_connection_present) {
             alert("Alert ! Correct connection proceed to take reading.");
             document.getElementById("check-button").disabled = true;
             document.querySelector("#connection-table").innerHTML = "";
@@ -585,7 +621,7 @@ function disable_all() {
                 e6 = prepare2("ld6"),
                 e7 = prepare3("ld7"),
                 e8 = prepare2("ld8"),
-                e9 = prepare1("ld9"),
+                e9 = prepare3("ld9"),
                 e10 = prepare2("ld10"),
                 e11 = prepare2("ld11"),
                 e12 = prepare3("ld12"),
@@ -600,84 +636,47 @@ function disable_all() {
 
 
 
-var isrotating = false;
-var rotoroffstate = true;
 var mcboffstate = true;
-var were = 270;
+
 function mcbonoff() {
     if (rightconnection == true) {
         if (mcboffstate == true) {
             mcboffstate = false;
             document.getElementById('myimage').src = '/static/images/mcbon.png';
             //document.getElementById('myimage1').src = '/static/images/push2.png';
-            //document.getElementById('myimage2').src = '/static/images/push2.png';
+            document.getElementById('myimage2').src = '/static/images/push2.png';
             //document.getElementById('myimage3').src = '/static/images/push2.png';
         }
 
     }
 }
 
+var rangeMeter1 = document.querySelector('#range1');
+var rangeMeter2 = document.querySelector('#range2');
 
-
-function rotaronoff() {
-
-    if (mcboffstate == true) {
-        alert("Alert ! Please complete the connection first");
-    }
-    else {
-        if (isrotating == false) {
-            isrotating = true;
-            rotoroffstate = false;
-            document.getElementById('cirmover2').style.animation = "rotation 0s infinite linear";
-            document.getElementById("graph1").disabled = false;
-            document.getElementById("graph2").disabled = false;
-            document.getElementById("graph3").disabled = false;
-            document.getElementById("addToTable1").disabled = false;
-            document.getElementById("addToTable2").disabled = false;
-            document.getElementById("range").disabled = false;
-            var intervalId = setInterval(function () {
-                if (were === 390) {
-                    clearInterval(intervalId);
-                    were = 400;
-                    isrotating = false;
-                }
-                were++;
-            }, 15);
-            rangeMeter.value = 1;
-            rangeChange();
-        }
-        else {
-            return;
-        }
-    }
-}
-
-var rangeMeter = document.querySelector('#range');
-
-var rangeShow = document.querySelector("#show");
+var rangeShow1 = document.querySelector("#show1");
 var rangeShow2 = document.querySelector("#show2");
 var rangeShow3 = document.querySelector("#show3");
 var rangeShow4 = document.querySelector("#show4");
-var rangeShow5 = document.querySelector("#show5");
-var rangeShow6 = document.querySelector("#show6");
-var rangeShow7 = document.querySelector("#show7");
 
-var rangeClock = document.querySelector('#meter');
+var meterShow1 = document.getElementById("show01");
+var meterShow2 = document.getElementById("show02");
+var meterShow3 = document.getElementById("show03");
+var meterShow4 = document.getElementById("show04");
+
+var rangeClock1 = document.querySelector('#meter1');
 var rangeClock2 = document.querySelector('#meter2');
 var rangeClock3 = document.querySelector('#meter3');
-
-var meterColor = document.querySelector('.meter-shape');
-var meterColor2 = document.querySelector('.meter-shape2');
-var meterColor3 = document.querySelector('.meter-shape3');
-
-var addToTable1 = document.querySelector('#addToTable1');
-var addToTable2 = document.querySelector('#addToTable2');
 
 var table1 = document.querySelector('#table1');
 var table2 = document.querySelector('#table2');
 
+rangeMeter1.addEventListener('input', rangeChange1);
+function rangeChange1() {
+}
 
-function rangeChange() {
+rangeMeter2.addEventListener('input', rangeChange2);
+function rangeChange2() {
     var rotateClock = rangeMeter.value;
 
     rangeClock.style.transform = 'rotate(' + -30 + 'deg)';
@@ -792,7 +791,6 @@ function rangeChange() {
         }
     }
 }
-rangeMeter.addEventListener('input', rangeChange);
 
 
 var clickcounter1 = 0;
