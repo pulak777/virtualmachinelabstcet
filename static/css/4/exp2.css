@@ -342,6 +342,17 @@ div {
   }
 }
 
+.rang-number {
+  width: 50%;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  background-color: white;
+  color: black;
+  border-radius: 50px;
+}
+
 th,
 td {
   border: 1px solid black;
