@@ -61,87 +61,45 @@ body {
     left: 21em;
   }
   #ld4 {
-    top: 20em;
-    left: 21em;
-  }
-  #ld5 {
     top: 24em;
     left: 21em;
   }
+  #ld5 {
+    top: 11.5em;
+    left: 31em;
+  }
   /*Rheostat*/
   #ld6 {
-    top: 19.5em;
-    left: 31em;
+    top: 11.5em;
+    left: 39em;
   }
   #ld7 {
-    top: 19.5em;
-    left: 39em;
-  }
-/*Voltmeter*/
-  #ld8 {
-    top: 11.5em;
-    left: 31em;
-  }
-  #ld9 {
-    top: 11.5em;
-    left: 39em;
-  }
-
-  /*Ammeter*/
-  #ld10 {
     top: 11.5em;
     left: 47em;
   }
-  #ld11 {
+  #ld8 {
     top: 11.5em;
     left: 55em;
   }
-  /*Voltmeter*/
-  #ld12 {
-    top: 11.5em;
-    left: 69em;
+
+
+  #ld9 {
+    top: 23em;
+    left: 41em;
   }
-  #ld13 {
-    top: 11.5em;
-    left: 77em;
+  #ld10 {
+    top: 28em;
+    left: 41em;
+  }
+  #ld11 {
+    top: 33.5em;
+    left: 47em;
+  }
+  #ld12 {
+    top: 33.5em;
+    left: 53em;
   }
   
-  /* DC Shunt  */
-  #ld14 {
-    top: 23em;
-    left: 60em;
-  }
-  #ld15 {
-    top: 29em;
-    left: 60em;
-  }
-  #ld16 {
-    top: 33em;
-    left: 65em;
-  }
-  #ld17 {
-    top: 33em;
-    left: 70em;
-  }
-
-  /* Ammeter */
-  #ld18 {
-    top: 34em;
-    left: 31em;
-  }
-  #ld19 {
-    top: 34em;
-    left: 39em;
-  }
-  /*Rheostat*/
-  #ld20 {
-    top: 29em;
-    left: 46em;
-  }
-  #ld21 {
-    top: 29em;
-    left: 53.5em;
-  }
   
   path,
   .jtk-endpoint {

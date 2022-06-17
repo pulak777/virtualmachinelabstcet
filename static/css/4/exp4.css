@@ -48,99 +48,90 @@ body {
   /** ELEMENT POSITIONS **/
   
   #ld1 {
-    top: 14.6em;
-    left: 26.5em;
+    top: 11.5em;
+    left: 22em;
   }
   #ld2 {
-    top: 17.4em;
-    left: 26.5em;
+    top: 14.5em;
+    left: 22em;
   }
   /* */
   #ld3 {
-    top: 20.6em;
-    left: 26.5em;
+    top: 18.5em;
+    left: 22em;
   }
   #ld4 {
-    top: 23.4em;
-    left: 26.5em;
+    top: 21.5em;
+    left: 22em;
   }
   /* */
   #ld5 {
-    top: 26.6em;
-    left: 26.5em;
+    top: 8em;
+    left: 29em;
   }
   #ld6 {
-    top: 29.6em;
-    left: 26.5em;
+    top: 12em;
+    left: 29em;
   }
   /* */
   #ld7 {
-    top: 16em;
-    left: 31.5em;
+    top: 19em;
+    left: 34em;
   }
   #ld8 {
-    top: 20em;
-    left: 31.5em;
+    top: 19em;
+    left: 39em;
   }
+  /* DC motor*/
   #ld9 {
-    top: 24.5em;
-    left: 36.5em;
+    top: 17em;
+    left: 54em;
   }
   #ld10 {
-    top: 24.5em;
-    left: 41em;
+    top: 17em;
+    left: 60em;
   }
-  /* */
   #ld11 {
-    top: 25em;
-    left: 58em;
+    top: 20.5em;
+    left: 54em;
   }
   #ld12 {
-    top: 25em;
-    left: 64em;
+    top: 20.5em;
+    left: 60em;
   }
   #ld13 {
-    top: 16em;
-    left: 68em;
+    top: 24em;
+    left: 54em;
   }
   #ld14 {
-    top: 20em;
-    left: 68em;
+    top: 24em;
+    left: 60em;
   }
+   /* */
   /* */
   #ld15 {
-    top: 44em;
-    left: 48.5em;
+    top: 9em;
+    left: 72.3em;
   }
   #ld16 {
-    top: 44em;
-    left: 54.5em;
+    top: 9em;
+    left: 77.5em;
   }
-  /* */
   #ld17 {
-    top: 12em;
-    left: 75em;
+    top: 21em;
+    left: 72.3em;
   }
   #ld18 {
-    top: 12em;
-    left: 80em;
+    top: 21em;
+    left: 77.5em;
   }
   #ld19 {
-    top: 36.5em;
-    left: 75em;
+    top: 28em;
+    left: 68em;
   }
   #ld20 {
-    top: 36.5em;
-    left: 80em;
-  }
-  /* */
-  #ld21 {
-    top: 41em;
-    left: 73.9em;
-  }
-  #ld22 {
-    top: 41em;
-    left: 81.5em;
+    top: 25em;
+    left: 82em;
   }
   
   path,
@@ -160,7 +151,7 @@ body {
     float: left;
     width: 100%;
     padding: 10px;
-    height: 800px;
+    height: 500px;
     border: solid;
     border-bottom: 0;
   }
@@ -319,22 +310,22 @@ body {
   }
   .rectifier {
     position: absolute;
-    top: 11.5em;
-    left: 16.7em;
-    height: 350px;
-    width: 150px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    top: 8em;
+    left: 15em;
+    height: 250px;
+    width: 100px;
+    padding-top: 60px;
+    padding-bottom: 35px;
     background-color: #404040;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   
   .rectifier-diode {
     background-color: #dcc5c2;
     padding: 5px;
-    height: 25%;
+    height: 30%;
     display: flex;
     justify-content: center;
   }
@@ -344,34 +335,37 @@ body {
     max-height: 100%;
     border: 2px solid;
   }
-  
-  .dc-motor {
-    position: absolute;
-    left: 33em;
-    top: 9.5em;
-    background-color: #404040;
-    padding: 5px;
-    width: 200px;
-    height: 235px;
-  }
-  
-  .dc-motor img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-  
+
   .dc-generator {
     position: absolute;
-    left: 55em;
-    top: 8.8em;
+    display: flex;
+    flex-direction: column;
+    left: 30em;
+    top: 1em;
     background-color: white;
     width: 200px;
     height: 235px;
   }
   .dc-generator img {
+    max-width: 95%;
+    max-height: 95%;
+    border: 6px solid #404040;
+  }
+  
+  
+  .dc-motor {
+    position: absolute;
+    left: 51em;
+    top: 2em;
+    background-color: #404040;
+    width: 200px;
+    height: 235px;
+    
+  }
+  
+  .dc-motor img {
     max-width: 100%;
     max-height: 100%;
-    border: 6px solid #404040;
   }
   
   .addButtonClass {

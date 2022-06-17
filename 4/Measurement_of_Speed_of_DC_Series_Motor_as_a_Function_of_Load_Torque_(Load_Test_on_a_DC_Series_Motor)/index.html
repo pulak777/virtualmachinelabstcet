@@ -10,7 +10,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4250097576674323"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../static/css/style.css">
-    <link rel="stylesheet" href="../../static/css/5/exp5.css">
+    <link rel="stylesheet" href="../../static/css/4/exp5.css">
 
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="../../static/js/graph.ob.js"></script>
@@ -23,34 +23,34 @@
                 <tr>
                     <td><B>From</B></td>
                     <td>1</td>
-                    <td>2</td>
-                    <td>5</td>
+                    <td>4</td>
+                    <td>7</td>
                     <td>6</td>
                     <td>7</td>
-                    <td>10</td>
-                    <td>12</td>
-                    <td>17</td>
+                    <td>11</td>
+                    <td>5</td>
                     <td>19</td>
+                    <td>21</td>
+                    <td>2</td>
                     <td>15</td>
                     <td>12</td>
                     <td>13</td>
-
                 </tr>
                 <tr>
                     <td><B>To</B></td>
                     <td>3</td>
-                    <td>4</td>
-                    <td>7</td>
+                    <td>6</td>
+                    <td>10</td>
                     <td>8</td>
                     <td>9</td>
-                    <td>11</td>
                     <td>16</td>
                     <td>18</td>
-                    <td>15</td>
-                    <td>8</td>
+                    <td>20</td>
                     <td>14</td>
-                    <td>8</td>
-
+                    <td>15</td>
+                    <td>17</td>
+                    <td>16</td>
+                    <td>17</td>
                 </tr>
             </table>
         </div>
@@ -59,9 +59,9 @@
             </div>
             <div class="littledot" id="ld2"></br><a href="#" class="cmdLink detach" rel="ld2">2</a>
             </div>
-            <div class="littledot" id="ld3"></br><a href="#" class="cmdLink detach" rel="ld3">3</a>
+            <div class="littledot" id="ld3"></br><a href="#" class="cmdLink detach" rel="ld3">3(L)</a>
             </div>
-            <div class="littledot" id="ld4"></br><a href="#" class="cmdLink detach" rel="ld4">4</a>
+            <div class="littledot" id="ld4"></br><a href="#" class="cmdLink detach" rel="ld4">4(A)</a>
             </div>
             <div class="littledot" id="ld5"></br><a href="#" class="cmdLink detach" rel="ld5">5</a>
             </div>
@@ -79,27 +79,12 @@
             </div>
             <div class="littledot" id="ld12"></br><a href="#" class="cmdLink detach" rel="ld12">12</a>
             </div>
-            <div class="littledot" id="ld13"></br><a href="#" class="cmdLink detach" rel="ld13">13</a>
-            </div>
-            <div class="littledot" id="ld14"></br><a href="#" class="cmdLink detach" rel="ld14">14</a>
-            </div>
-            <div class="littledot" id="ld15"></br><a href="#" class="cmdLink detach" rel="ld15">15</a>
-            </div>
-            <div class="littledot" id="ld16"></br><a href="#" class="cmdLink detach" rel="ld16">16</a>
-            </div>
-            <div class="littledot" id="ld17"></br><a href="#" class="cmdLink detach" rel="ld17">17</a>
-            </div>
-            <div class="littledot" id="ld18"></br><a href="#" class="cmdLink detach" rel="ld18">18</a>
-            </div>
-            <div class="littledot" id="ld19"></br><a href="#" class="cmdLink detach" rel="ld19">19</a>
-            </div>
-
 
 
             <div class="row">
                 <div class="column">
 
-                    <div class="x0" style="position: relative; left: 1em; ">
+                    <div class="x0" style="position: absolute; left: 1em; ">
                         <div>
                             <button id="check-button"
                                 style="background-color:#27D447; border:none; padding: 5px; border-radius:5px">Check</button>
@@ -126,8 +111,8 @@
                         </div>
                     </div>
                     <!--POWER SUPPLY-->
-                    <div class="x1" style="position:relative; left: 0em;">
-                        <p><b>1-Phase, 220 V,<br> 50 Hz supply</b></p>
+                    <div class="x1" style="position:absolute; left: 1em; top: 13em;">
+                        <p><b>220 V,<br> DC supply</b></p>
                         <div style="top: -1em;">
                             <img id="myimage1" class="mcbSwitch" src="../../static/images/push1.png" alt="MCB Switch"
                                 width="25" height="25">
@@ -142,46 +127,28 @@
                         </div>
                     </div>
 
-                    <!--SINGLE PHASE AUTO TRANSFORMER-->
-                    <div class="x2" style="position: relative;left: 9em; top: -13em;">
-                        <div style="left: 1em;"><b>Single Phrase <br> Auto Transformer</b>
+                    <!--2 POINT STARTER-->
+                    <div class="x2" style="position: absolute;left: 12em; top: 14em;">
+                        <div style="left: 1em;"><b>2-point
+                                starter</b>
                         </div>
-                        <img style="width:12%;" class="variacBox" src="../../static/images/sp_auto_transformer.jfif"
+                        <img style="width:12%;" class="variacBox" src="../../static/images/three point starter.jpg"
                             alt="3 phase variac">
-
-                        <div class="rang" style="left: -41em; top: 1em;">
-                            <div class="rang-title2">
-                                <input class="rang-number2" id="show1" type="text" value="0" disabled="disabled" />
-                            </div>
-                        </div>
-
-                        <div style="top: -2em; left: 1.4em;"><b>Move the slider ➤</b></div>
-                        <div class="slidecontainer" style=" position:relative; top:-1.5em; left: 1.5em">
-                            <input class="rang-slider" disabled="true" id="range" type="range" min="0" max="8"
-                                value="0" />
-                        </div>
-
-                        <div class="rang" style="left: -37em; top: -15em;">
-                            <div class="rang-title4">
-                                <input class="rang-number4" id="show00" type="text" value="0" disabled="disabled" />
-                            </div>
-                        </div>
                     </div>
-
                     <!--VOLTMETER-->
-                    <div class="x3" style="position: relative;left: 19em; top: -38em;">
-                        <img style="padding-left: 60px" class="voltMeter" src="../../static/images/Voltmeter.png"
-                            alt="Voltmeter" width="170" height="200">
-                        <div class="meter1" style="position: absolute;top: -1em; left: -5.3em;">
-                            <div class="rang" style="position: absolute;top: -1em;left: 8em;">
+                    <div class="x5" style="position: absolute;left: 26em; top: 0.5em">
+                        <img style="padding-left: 60px" src="../../static/images/Voltmeter.png" alt="Wattmeter"
+                            width="170" height="200">
+                        <div class="meter2" style="position: absolute;top: -1em;left: -16em;">
+                            <div class="rang" style="position: absolute;top: -1em;left: 18.9em;">
                                 <div class="rang-title">
-                                    <input class="rang-number2" id="show2" type="text" value="0" disabled="disabled" />
+                                    <input class="rang-number2" id="show4" type="text" value="0" disabled="disabled" />
                                 </div>
                                 <br>Voltmeter
                             </div>
-                            <div style="position: absolute;top:-10.5em;left: 5.8em;">
-                                <svg class="meter">
-                                    <polygon class="meter-clock" id="meter1" points="129,145 137,90 145,145"></polygon>
+                            <div>
+                                <svg class="meter" style="position: absolute;top: -10.5em;left: 16.7em;">
+                                    <polygon class="meter-clock" id="meter3" points="129,145 137,90 145,145"></polygon>
                                     <circle class="meter-circle" r="10" cx="137" cy="145"></circle>
                                 </svg>
                             </div>
@@ -189,7 +156,7 @@
                     </div>
 
                     <!--AMMETER-->
-                    <div class="x4" style="position: relative;left: 32em; top: -65em;">
+                    <div class="x4" style="position: absolute;left: 42em; top: 0.5em;">
                         <img style="padding-left: 60px" src="../../static/images/Ammeter.png" alt="Ammeter" width="170"
                             height="200">
                         <div class="meter2" style="position: absolute; left: -16em; top: -1em;">
@@ -207,35 +174,50 @@
                             </div>
                         </div>
                     </div>
-                    <!--WATTMETER-->
-                    <div class="x5" style="position: relative;left: 50em; top: -77.7em;">
-                        <img style="padding-left: 60px" src="../../static/images/Wattmeter.png" alt="Wattmeter"
-                            width="170" height="200">
-                        <div class="meter2" style="position: absolute;top: -1em;left: -16em;">
-                            <div class="rang" style="position: absolute;top: -1em;left: 18.9em;">
-                                <div class="rang-title">
-                                    <input class="rang-number2" id="show4" type="text" value="0" disabled="disabled" />
-                                </div>
-                                <br>Wattmeter
-                            </div>
-                            <div>
-                                <svg class="meter" style="position: absolute;top: -10.5em;left: 16.7em;">
-                                    <polygon class="meter-clock" id="meter3" points="129,145 137,90 145,145"></polygon>
-                                    <circle class="meter-circle" r="10" cx="137" cy="145"></circle>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                    <!--1 PHASE INDUCTION MOTOR-->
-                    <div class="x6" style="position: relative;left: 44em; top: -72.7em;">
+
+
+                    <!--1 PHASE DC MOTOR-->
+                    <div class="x6" style="position: absolute;left: 40em; top: 19.65em;">
                         <div style="position: relative; left: 2.1em; top:-2.8em;">
-                            <img style="height:240px; width:240px;" src="../../static/images/Machine.png"
+                            <img style="height:270px; width:300px;" src="../../static/images/Machine.png"
                                 id="cirmover1" />
                             <div style="position: absolute;top:1.4em; left: 4em;"><b>Main Winding</b></div>
                         </div>
                     </div>
+                    <!--Weight pully-->
+                    <div class="x4" style="position: absolute;left: 57.64em; top: 4.5em;">
+                        <img style="padding-left: 60px" src="../../static/images/weight_load.png" alt="Ammeter"
+                            width="120%">
+
+                        <div class="rang" style="position: absolute;top: 7.7em;left: 4.8em;">
+                            <div class="rang-title4">
+                                <input class="rang-number4" id="show5" type="text" value="0" disabled="disabled" />
+                            </div>
+                        </div>
+
+                        <div class="rang" style="position: absolute;top: 7.7em;left: 14.4em;">
+                            <div class="rang-title4">
+                                <input class="rang-number4" id="show6" type="text" value="0" disabled="disabled" />
+                            </div>
+                        </div>
+
+                        <div style="position:relative; top: 1em; left: 9em;">
+                            <div style="position: relative; top: -0.5em;"><b>Move the slider ➤</b></div>
+
+                            <div class="rang" style="position: relative; left: -1em; top: -1em;">
+                                <div class="rang-title2">
+                                    <input class="rang-number" id="show7" type="text" value="0" disabled="disabled" />
+                                </div>
+                            </div>
+                            <div class="slidecontainer" style="position:relative; top: -2.4em; left: 1.5em;">
+                                <input class="rang-slider" disabled="true" id="range" type="range" min="0" max="9"
+                                    value="0" />
+                            </div>
+                        </div>
+
+                    </div>
                     <!--ROTOR VIEW-->
-                    <div class="x7" style="position: relative;left: 60em; top: -88.5em;">
+                    <div class="x7" style="position: absolute;left: 65em; top: 20em;">
                         <div style="top:1em;">
                             <img src="../../static/images/Rotorouter.png" class="rotate1"
                                 style="position: absolute;top:3.1px;left: 10px;width:150px ;">
@@ -245,53 +227,39 @@
                                 style="position: absolute;top:3.1px;left: 10px;width:150px ; opacity: 90%;">
                         </div>
                         <div style="top:-1em; left: 3em;"><b>Rotor View</b></div>
-                        <div class="rang" style="top: 9em;left: -36.3em;">
+                        <div class="rang" style="top: 9em;left: -1em;">
                             <div class="rang-title">
                                 <input class="rang-number4" id="show5" type="text" value="0" disabled="disabled" />
                             </div>
                         </div>
                     </div>
 
-                    <!--CAPACITOR-->
-                    <div class="x8" style="position: relative;left: 69em; top: -102.7em;">
-                        <div style="position: relative; left: 2.1em; top:-2.8em;">
-                            <img style="height:100px; width:100px;" src="../../static/images/capacitor.jfif"
-                                id="cirmover1" />
-                            <div style="position: absolute;top:-1.4em; left: 0em;"><b>--CAPACITOR--</b></div>
-                        </div>
-                    </div>
-
-                    <!--INDUCTOR-->
-                    <div class="x9" style="position: relative;left: 69.5em; top: -94.7em;">
-                        <div style="position: relative; left: 2.1em; top:-2.8em;">
-                            <img style="height:170px; width:170px; transform: rotate(110deg);"
-                                src="../../static/images/inductor.png" />
-                            <div style="position: absolute;top:-1.4em; left: 2.5em;"><b>Auxiliary Winding</b></div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
-        <!-- 
-   <div style="position:absolute;left:31em;top:24em;">
-              <table id="table" class="table"; style="position: relative;right:11.5em;top:-4.6em; ">
-              <tr>
-              <th>SN</th>
-              <th>Supply Voltage (V)</th>
-              <th>Current (A)</th>
-              <th>Speed (RPM)</th>
-              </tr>
-              </table>
-            </div> 
-  -->
-
-        <!--
-     <div style="position: relative; top: -0.8em;"><b>Torque vs Speed Graph</b></div>
-            <div class="container" style="position:absolute; top: 18.5em; left: 51.1em;">
-                <div class="box" id="myDiv" style="width:440px;height:300px;"></div>
+        <div class="row" style="width:1360px;">
+            <div class="column50">
+                <div>
+                    <table id="table1" class="table">
+                        <tr>
+                            <th>Sl.</th>
+                            <th>Supply voltage (V)</th>
+                            <th>Supply Current (A)</th>
+                            <th>Speed (rpm)</th>
+                            <th>S<sub>1</sub> (Kg)</th>
+                            <th>S<sub>2</sub> (Kg)</th>
+                        </tr>
+                    </table>
+                </div>
             </div>
-  -->
+            <div class="column50">
+                <div style="position: relative; top: -0.8em;"><b>Current VS Speed plot of DC shunt motor</b></div>
+                <div class="container" style="position: relative; left: 2em;">
+                    <div class="box" id="myDiv2" style="width:560px;height:335px;"></div>
+                </div>
+            </div>
+        </div>
+
 
         <div style="position: relative; top: 1em; ">
             <div><u><B>Instructions</B></u><br>
@@ -303,34 +271,34 @@
                         <tr>
                             <td><B>From</B></td>
                             <td>1</td>
-                            <td>2</td>
-                            <td>5</td>
+                            <td>4</td>
+                            <td>7</td>
                             <td>6</td>
                             <td>7</td>
-                            <td>10</td>
-                            <td>12</td>
-                            <td>17</td>
+                            <td>11</td>
+                            <td>5</td>
                             <td>19</td>
+                            <td>21</td>
+                            <td>2</td>
                             <td>15</td>
                             <td>12</td>
                             <td>13</td>
-
                         </tr>
                         <tr>
                             <td><B>To</B></td>
                             <td>3</td>
-                            <td>4</td>
-                            <td>7</td>
+                            <td>6</td>
+                            <td>10</td>
                             <td>8</td>
                             <td>9</td>
-                            <td>11</td>
                             <td>16</td>
                             <td>18</td>
-                            <td>15</td>
-                            <td>8</td>
+                            <td>20</td>
                             <td>14</td>
-                            <td>8</td>
-
+                            <td>15</td>
+                            <td>17</td>
+                            <td>16</td>
+                            <td>17</td>
                         </tr>
                     </table>
                     <B>Step 2: </B>Click "Check" button.
@@ -370,7 +338,7 @@
     </div>
     </div>
     <script src="../../static/js/jsplumb1.js"></script>
-    <script src="../../static/js/5/exp5.js"></script>
+    <script src="../../static/js/4/exp5.js"></script>
 </body>
 
 </html>

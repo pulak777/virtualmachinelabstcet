@@ -222,7 +222,7 @@ jsPlumb.ready(function () {
                 "target": "ld14"
             }
         ];
-        var correct_connections_20_18 = [
+        var correct_connections_18_20 = [
             {
                 "source": "ld20",
                 "target": "ld18"
@@ -303,6 +303,15 @@ jsPlumb.ready(function () {
                 "target": "ld5"
             },
             {
+                "source": "ld6",
+                "target": "ld15"
+            },
+
+            {
+                "source": "ld15",
+                "target": "ld6"
+            },
+            {
                 "source": "ld16",
                 "target": "ld12"
             },
@@ -358,7 +367,16 @@ jsPlumb.ready(function () {
 
         var is_connected_1_7 = false;
         var is_connected_2_8 = false;
+        var is_connected_3_9 = false;
+        var is_connected_4_10 = false;
+        var is_connected_5_11 = false;
+        var is_connected_6_15 = false;
+        var is_connected_16_12 = false;
         var is_connected_13_17 = false;
+        var is_connected_14_19 = false;
+        var is_connected_18_20 = false;
+        var is_connected_21_19 = false;
+        var is_connected_22_20 = false;
         var unallowed_connection_present = false;
 
         actual_connections.forEach(function (connection) {
@@ -379,8 +397,63 @@ jsPlumb.ready(function () {
                 });
             }
 
+            if (!is_connected_3_9) {
+                is_connected_3_9 = correct_connections_3_9.find(function (conn) {
+                    return conn.source === this_connection.source && conn.target === this_connection.target;
+                });
+            }
+
+            if (!is_connected_4_10) {
+                is_connected_4_10 = correct_connections_4_10.find(function (conn) {
+                    return conn.source === this_connection.source && conn.target === this_connection.target;
+                });
+            }
+
+            if (!is_connected_5_11) {
+                is_connected_5_11 = correct_connections_5_11.find(function (conn) {
+                    return conn.source === this_connection.source && conn.target === this_connection.target;
+                });
+            }
+
+            if (!is_connected_6_15) {
+                is_connected_6_15 = correct_connections_6_15.find(function (conn) {
+                    return conn.source === this_connection.source && conn.target === this_connection.target;
+                });
+            }
+
+            if (!is_connected_16_12) {
+                is_connected_16_12 = correct_connections_16_12.find(function (conn) {
+                    return conn.source === this_connection.source && conn.target === this_connection.target;
+                });
+            }
+
+
             if (!is_connected_13_17) {
                 is_connected_13_17 = correct_connections_13_17.find(function (conn) {
+                    return conn.source === this_connection.source && conn.target === this_connection.target;
+                });
+            }
+
+            if (!is_connected_14_19) {
+                is_connected_14_19 = correct_connections_14_19.find(function (conn) {
+                    return conn.source === this_connection.source && conn.target === this_connection.target;
+                });
+            }
+
+            if (!is_connected_18_20) {
+                is_connected_18_20 = correct_connections_18_20.find(function (conn) {
+                    return conn.source === this_connection.source && conn.target === this_connection.target;
+                });
+            }
+
+            if (!is_connected_21_19) {
+                is_connected_21_19 = correct_connections_21_19.find(function (conn) {
+                    return conn.source === this_connection.source && conn.target === this_connection.target;
+                });
+            }
+
+            if (!is_connected_22_20) {
+                is_connected_22_20 = correct_connections_22_20.find(function (conn) {
                     return conn.source === this_connection.source && conn.target === this_connection.target;
                 });
             }
@@ -393,7 +466,7 @@ jsPlumb.ready(function () {
         });
 
         //short cut can be used for debugging
-        if (is_connected_13_17 && !unallowed_connection_present) {
+        if (is_connected_1_7 && is_connected_2_8 && is_connected_3_9 && is_connected_4_10 && is_connected_5_11 && is_connected_6_15 && is_connected_14_19 && is_connected_16_12 && is_connected_18_20 && is_connected_21_19 && is_connected_22_20 && is_connected_13_17 && !unallowed_connection_present) {
             alert("𝐀𝐥𝐞𝐫𝐭 ! 𝐂𝐨𝐫𝐫𝐞𝐜𝐭 𝐜𝐨𝐧𝐧𝐞𝐜𝐭𝐢𝐨𝐧 𝐩𝐫𝐨𝐜𝐞𝐞𝐝 𝐭𝐨 𝐭𝐚𝐤𝐞 𝐫𝐞𝐚𝐝𝐢𝐧𝐠.");
             document.getElementById("check-button").disabled = true;
             rightconnection = true;
@@ -507,27 +580,20 @@ function disable_all() {
 
 var rangeMeter1 = document.getElementById('range1');
 var rangeMeter2 = document.getElementById('range2');
-var rangeMeter3 = document.getElementById('range3');
 
 var rangeShow1 = document.getElementById("show1");
 var rangeShow2 = document.getElementById("show2");
-var rangeShow3 = document.getElementById("show3");
-
-
 
 var meterShow1 = document.getElementById("show01");
 var meterShow2 = document.getElementById("show02");
 var meterShow3 = document.getElementById("show03");
 var meterShow4 = document.getElementById("show04");
 
-
 var rangeClock1 = document.getElementById('meter1');
 var rangeClock2 = document.getElementById('meter2');
 var rangeClock3 = document.getElementById('meter3');
 
 var table1 = document.getElementById('table1');
-
-
 
 const int_speed = [0, 200, 400, 600, 800, 1000];
 const field_curr = [0, 0.12, 0.23, 0.41, 0.56, 0.7];
@@ -574,13 +640,10 @@ function rotaronoff() {
         if (rotoroffstate == true) {
             rangeMeter1.disabled = false;
             rangeMeter1.value = 1;
-            rangeMeter2.value = 0;
             rangeShow1.value = rangeMeter1.value;
-            rangeShow2.value = rangeMeter2.value;
 
             meterShow1.value = int_speed[rangeMeter1.value];
             document.getElementById('cirmover').style.animation = `rotation ${(1500 - meterShow1.value) / 200}s infinite linear`;
-
         }
         else {
             return;
@@ -592,54 +655,43 @@ function rotaronoff() {
 }
 
 var sliderValue = 0;
-var addButton = document.getElementById("add");
 
+rangeMeter1.addEventListener('input', rangeChange1);
 function rangeChange1() {
     const val = rangeMeter1.value;
     rangeShow1.value = val;
     meterShow1.value = int_speed[val];
     meterShow2.value = field_curr[val];
     document.getElementById('cirmover').style.animation = `rotation ${(1500 - meterShow1.value) / 400}s infinite linear`;
-    rangeClock1.style.transform = 'rotate(' + (-62 + (((meterShow2.value / 2) * 1000) / 50)) + 'deg)';
+    rangeClock1.style.transform = 'rotate(' + (-62 + (meterShow2.value * 30)) + 'deg)';
 
     if (val === "5") {
         document.getElementById("range1").disabled = true;
-        //rangeMeter2.disabled = false;
-        document.getElementById("range2").value = 1;
-        rangeShow2.value = 1;
-        document.getElementById("range3").disabled = false;
+        document.getElementById("range2").disabled = false;
         setTimeout(function () {
             alert("𝐍𝐨𝐰 start changing 'Resistive load Box' value");
         }, 1000);
-        rangeChange3();
-        meterShow3.value = terminal_voltage[0];
-        meterShow4.value = load_curr[0];
-        rangeClock2.style.transform = 'rotate(' + (-62 + (((meterShow3.value / 20) * 1000) / 50)) + 'deg)';
-        rangeClock3.style.transform = 'rotate(' + (-62 + (((meterShow4.value / 20) * 1000) / 50)) + 'deg)';
+        addToTable();
+        meterShow3.value = load_curr[0];
+        meterShow4.value = terminal_voltage[0];
+        rangeClock2.style.transform = 'rotate(' + (-62 + (meterShow3.value * 30)) + 'deg)';
+        rangeClock3.style.transform = 'rotate(' + (-62 + ((meterShow4.value - 90) * 2)) + 'deg)';
     }
 }
-rangeMeter1.addEventListener('input', rangeChange1);
 
-
+rangeMeter2.addEventListener('input', rangeChange2);
 function rangeChange2() {
-    const val = rangeMeter3.value;
-    rangeShow3.value = val;
+    rangeShow2.value = rangeMeter2.value;
 
-    meterShow3.value = terminal_voltage[val];
-    rangeClock2.style.transform = 'rotate(' + (-62 + (((meterShow3.value) * 1000) / 50)) + 'deg)';
-    meterShow4.value = load_curr[val];
-    rangeClock3.style.transform = 'rotate(' + (-62 + (((meterShow4.value / 20) * 1000) / 50)) + 'deg)';
-    rangeChange3();
-    if (val == 9) {
-        setTimeout(function () {
-            alert("𝐍𝐨𝐰 click on 'Graph' button to generate Load Current vs Terminal Voltage graph");
-        }, 1000);
-        document.getElementById("graph").disabled = false;
-        rangeMeter3.disabled = true;
+    meterShow3.value = load_curr[rangeMeter2.value];
+    rangeClock2.style.transform = 'rotate(' + (-62 + (meterShow3.value * 30)) + 'deg)';
+    meterShow4.value = terminal_voltage[rangeMeter2.value];
+    rangeClock3.style.transform = 'rotate(' + (-62 + ((meterShow4.value - 90) * 2)) + 'deg)';
+    if (+rangeMeter2.value + 1 == +clickCounter) {
+        document.getElementById("add").disabled = false;
+        document.getElementById("range2").disabled = true;
     }
-
 }
-rangeMeter3.addEventListener('input', rangeChange2);
 
 const trace1 = {
     x: [],
@@ -654,10 +706,9 @@ const trace2 = {
 };
 
 
-var clickCounter = 0;
-function rangeChange3() {
-    const val = rangeMeter3.value;
-    clickCounter++;
+var clickCounter = 1;
+function addToTable() {
+    const val = rangeMeter2.value;
     const y = table1.insertRow(clickCounter);
     const cell1 = y.insertCell(0);
     cell1.setAttribute('style', 'text-align: center;');
@@ -678,8 +729,17 @@ function rangeChange3() {
     trace1.x.push(load_curr[val]);
     trace1.y.push(terminal_voltage[val]);
 
+    clickCounter++;
 
-
+    document.getElementById("add").disabled = true;
+    document.getElementById("range2").disabled = false;
+    if (val == 9) {
+        setTimeout(function () {
+            alert("𝐍𝐨𝐰 click on 'Graph' button to generate Load Current vs Terminal Voltage graph");
+        }, 1000);
+        document.getElementById("graph").disabled = false;
+        rangeMeter2.disabled = true;
+    }
 }
 
 function drawgraph() {

@@ -83,13 +83,13 @@
             </div>
             <div class="littledot" id="ld13"></br><a href="#" class="cmdLink detach" rel="ld13">13</a>
             </div>
-            <div class="littledot" id="ld14"></br><a href="#" class="cmdLink detach" rel="ld14">14</a>
+            <div class="littledot" id="ld14"></br><a href="#" class="cmdLink detach" rel="ld14">14(A1)</a>
             </div>
-            <div class="littledot" id="ld15"></br><a href="#" class="cmdLink detach" rel="ld15">15</a>
+            <div class="littledot" id="ld15"></br><a href="#" class="cmdLink detach" rel="ld15">15(A2)</a>
             </div>
-            <div class="littledot" id="ld16"></br><a href="#" class="cmdLink detach" rel="ld16">16</a>
+            <div class="littledot" id="ld16"></br><a href="#" class="cmdLink detach" rel="ld16">16(F1)</a>
             </div>
-            <div class="littledot" id="ld17"></br><a href="#" class="cmdLink detach" rel="ld17">17</a>
+            <div class="littledot" id="ld17"></br><a href="#" class="cmdLink detach" rel="ld17">17(F2)</a>
             </div>
             <div class="littledot" id="ld18"></br><a href="#" class="cmdLink detach" rel="ld18">18</a>
             </div>
@@ -280,25 +280,51 @@
                 </div>
             </div>
         </div>
-        <!-- 
-   <div style="position:absolute;left:31em;top:24em;">
-              <table id="table" class="table"; style="position: relative;right:11.5em;top:-4.6em; ">
-              <tr>
-              <th>SN</th>
-              <th>Supply Voltage (V)</th>
-              <th>Current (A)</th>
-              <th>Speed (RPM)</th>
-              </tr>
-              </table>
-            </div> 
-  -->
-
-        <!--
-     <div style="position: relative; top: -0.8em;"><b>Torque vs Speed Graph</b></div>
-            <div class="container" style="position:absolute; top: 18.5em; left: 51.1em;">
-                <div class="box" id="myDiv" style="width:440px;height:300px;"></div>
+        <div class="row" style="width:1360px;">
+            <div class="column55">
+                <div>
+                    <table id="table1" class="table">
+                        <tr>
+                            <th>Sl.</th>
+                            <th>Field current (A)</th>
+                            <th>Armature Current (A)</th>
+                            <th>Armature Voltage (V)</th>
+                            <th>Voltage Across R<sub>c</sub> (V)</th>
+                            <th>Value of R<sub>c</sub> (Ohm)</th>
+                            <th>Speed (rpm)</th>
+                        </tr>
+                    </table>
+                </div>
             </div>
-  -->
+            <div class="column45">
+                <div>
+                    <table id="table2" class="table">
+                        <tr>
+                            <th>Sl.</th>
+                            <th>Armature current (A)</th>
+                            <th>Armature Voltage (V)</th>
+                            <th>Field Current (A)</th>
+                            <th>Speed (rpm)</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="width:1360px;">
+            <div class="column50">
+                <div style="position: relative; top: -0.8em;"><b>Armature voltage VS speed of DC shunt motor</b></div>
+                <div class="container" style="position: relative; left: 4em">
+                    <div class="box" id="myDiv1" style="width:500px;height:350px;"></div>
+                </div>
+            </div>
+            <div class="column50">
+                <div style="position: relative; top: -0.8em;"><b>Field current VS speed plot of DC shunt motor</b></div>
+                <div class="container" style="position: relative; left: 4em">
+                    <div class="box" id="myDiv2" style="width:500px;height:350px;"></div>
+                </div>
+            </div>
+        </div>
+
 
         <div style="position: relative; top: 1em; ">
             <div><u><B>Instructions</B></u><br>
