@@ -750,7 +750,7 @@ function drawgraph() {
     const layout1 = {
         xaxis: {
             title: {
-                text: 'Field Current(A)',
+                text: 'Load Current(A)',
                 font:
                 {
                     family: 'Courier New, monoscope',
@@ -761,7 +761,7 @@ function drawgraph() {
         },
         yaxis: {
             title: {
-                text: 'Induced Emf(V)',
+                text: 'Terminal Voltage(V)',
                 font:
                 {
                     family: 'Courier New, monoscope',
