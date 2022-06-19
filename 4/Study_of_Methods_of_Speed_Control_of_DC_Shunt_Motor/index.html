@@ -49,8 +49,8 @@
                     <td>14</td>
                     <td>15</td>
                     <td>17</td>
-                    <td>16</td>
-                    <td>17</td>
+                    <td>14</td>
+                    <td>15</td>
                 </tr>
             </table>
         </div>
@@ -108,12 +108,19 @@
                                 style="background-color:#27D447; border:none; padding: 5px; border-radius:5px">Check</button>
                         </div>
                         <div>
-                            <button disabled="true"
-                                style="background-color:#27D447; border:none; padding: 5px; border-radius:5px">_____</button>
+                            <button disabled="true" id="add1" onclick="addToTable1()"
+                                style="background-color:#27D447; border:none; padding: 5px; border-radius:5px">Add to
+                                Table 1</button>
                         </div>
                         <div>
-                            <button disabled="true"
-                                style="background-color:#27D447; border:none; padding: 5px; border-radius:5px">_____
+                            <button disabled="true" id="add2" onclick="addToTable2()"
+                                style="background-color:#27D447; border:none; padding: 5px; border-radius:5px">Add to
+                                Table 2
+                            </button>
+                        </div>
+                        <div>
+                            <button id="graph" disabled="true" onclick="drawgraph()"
+                                style="background-color:#27D447; border:none; padding: 5px; border-radius:5px">Graph
                             </button>
                         </div>
 
@@ -160,13 +167,13 @@
                         <div class="meter2" style="position: absolute;top: -1em;left: -16em;">
                             <div class="rang" style="position: absolute;top: -1em;left: 18.9em;">
                                 <div class="rang-title">
-                                    <input class="rang-number2" id="show4" type="text" value="0" disabled="disabled" />
+                                    <input class="rang-number2" id="show1" type="text" value="0" disabled="disabled" />
                                 </div>
                                 <br>Voltmeter
                             </div>
                             <div>
                                 <svg class="meter" style="position: absolute;top: -10.5em;left: 16.7em;">
-                                    <polygon class="meter-clock" id="meter3" points="129,145 137,90 145,145"></polygon>
+                                    <polygon class="meter-clock" id="meter1" points="129,145 137,90 145,145"></polygon>
                                     <circle class="meter-circle" r="10" cx="137" cy="145"></circle>
                                 </svg>
                             </div>
@@ -180,7 +187,7 @@
                         <div class="meter2" style="position: absolute; left: -16em; top: -1em;">
                             <div class="rang" style="position: absolute;top: -1em;left: 18.9em;">
                                 <div class="rang-title">
-                                    <input class="rang-number2" id="show3" type="text" value="0" disabled="disabled" />
+                                    <input class="rang-number2" id="show2" type="text" value="0" disabled="disabled" />
                                 </div>
                                 <br>Ammeter
                             </div>
@@ -200,13 +207,13 @@
                         <div class="meter1" style="position: absolute;top: -1em; left: -5.3em;">
                             <div class="rang" style="position: absolute;top: -1em;left: 8em;">
                                 <div class="rang-title">
-                                    <input class="rang-number2" id="show2" type="text" value="0" disabled="disabled" />
+                                    <input class="rang-number2" id="show3" type="text" value="0" disabled="disabled" />
                                 </div>
                                 <br>Voltmeter
                             </div>
                             <div style="position: absolute;top:-10.5em;left: 5.8em;">
                                 <svg class="meter">
-                                    <polygon class="meter-clock" id="meter1" points="129,145 137,90 145,145"></polygon>
+                                    <polygon class="meter-clock" id="meter3" points="129,145 137,90 145,145"></polygon>
                                     <circle class="meter-circle" r="10" cx="137" cy="145"></circle>
                                 </svg>
                             </div>
@@ -216,16 +223,38 @@
                     <!--Rheostat 1-->
                     <div class="x6" style="position: absolute;left: 27em; top: 18em;">
                         <div style="position: relative; left: 2.1em; top:-2.8em;">
-                            <img style="width: 200px;" src="../../static/images/Rheostat_crop.png" id="cirmover1" />
+                            <img style="width: 200px;" src="../../static/images/Rheostat_crop.png" />
                             <div style="position: absolute;top:1.5em; left: 11em;"><b>R<sub>C</sub></b></div>
+                        </div>
+                        <div style="display: flex; position: relative; top: -2.5em; left: 2.5em;">
+                            <div class="rang" style="position: relative; top: -1.2em;">
+                                <div class="rang-title2">
+                                    <input class="rang-number2" id="show01" type="text" value="5" disabled="disabled" />
+                                </div>
+                            </div>
+                            <div style="margin-left: 0.5em;">
+                                <input class="rang-slider" disabled="true" id="range1" type="range" min="0" max="5"
+                                    value="5" />
+                            </div>
                         </div>
                     </div>
 
                     <!--Rheostat 2-->
                     <div class="x6" style="position: absolute;left: 42em; top: 27em;">
                         <div style="position: relative; left: 2.1em; top:-2.8em;">
-                            <img style="width: 200px;" src="../../static/images/Rheostat_crop.png" id="cirmover1" />
-                            <div style="position: absolute;top:1.5em; left: 11em;"><b>R<sub>C</sub></b></div>
+                            <img style="width: 200px;" src="../../static/images/Rheostat_crop.png" />
+                            <div style="position: absolute;top:1.5em; left: 11em;"><b>R<sub>F</sub></b></div>
+                        </div>
+                        <div style="display: flex; position: relative; top: -2.5em; left: 2.5em;">
+                            <div class="rang" style="position: relative; top: -1.2em;">
+                                <div class="rang-title2">
+                                    <input class="rang-number2" id="show02" type="text" value="0" disabled="disabled" />
+                                </div>
+                            </div>
+                            <div style="margin-left: 0.5em;">
+                                <input class="rang-slider" disabled="true" id="range2" type="range" min="0" max="5"
+                                    value="0" />
+                            </div>
                         </div>
                     </div>
 
@@ -236,14 +265,14 @@
                         <div class="meter2" style="position: absolute; left: -16em; top: -1em;">
                             <div class="rang" style="position: absolute;top: -1em;left: 18.9em;">
                                 <div class="rang-title">
-                                    <input class="rang-number2" id="show3" type="text" value="0" disabled="disabled" />
+                                    <input class="rang-number2" id="show4" type="text" value="0" disabled="disabled" />
                                 </div>
                                 <br>Ammeter
                             </div>
                             <div>
-                                <svg class="meter" style="position: absolute;top: -10.5em;left: 16.7em;">
-                                    <polygon class="meter-clock" id="meter2" points="129,145 137,90 145,145"></polygon>
-                                    <circle class="meter-circle" r="10" cx="137" cy="145"></circle>
+                                <svg class="meter" style="position: absolute;top: -8.7em;left: 16.7em;">
+                                    <polygon class="meter-clock" id="meter4" points="149,125 160,75 163,124"></polygon>
+                                    <circle class="meter-circle" r="10" cx="132" cy="122"></circle>
                                 </svg>
                             </div>
                         </div>
@@ -360,8 +389,8 @@
                             <td>14</td>
                             <td>15</td>
                             <td>17</td>
-                            <td>16</td>
-                            <td>17</td>
+                            <td>14</td>
+                            <td>15</td>
                         </tr>
                     </table>
                     <B>Step 2: </B>Click "Check" button.
