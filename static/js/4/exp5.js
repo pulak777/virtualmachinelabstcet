@@ -135,15 +135,15 @@ jsPlumb.ready(function () {
 
     document.getElementById("check-button").addEventListener("click", function () {
 
-        var correct_connections_17_18 = [
+        var correct_connections_1_3 = [
             {
-                "source": "ld17",
-                "target": "ld18"
+                "source": "ld1",
+                "target": "ld3"
             },
 
             {
-                "source": "ld18",
-                "target": "ld17"
+                "source": "ld3",
+                "target": "ld1"
             }
         ];
 
@@ -153,286 +153,26 @@ jsPlumb.ready(function () {
                 "source": "ld1",
                 "target": "ld3"
             },
-
             {
                 "source": "ld3",
                 "target": "ld1"
-            },
-            {
-                "source": "ld2",
-                "target": "ld4"
-            },
-
-            {
-                "source": "ld4",
-                "target": "ld2"
-            },
-            {
-                "source": "ld7",
-                "target": "ld5"
-            },
-
-            {
-                "source": "ld5",
-                "target": "ld7"
-            },
-            {
-                "source": "ld6",
-                "target": "ld8"
-            },
-
-            {
-                "source": "ld8",
-                "target": "ld6"
-            },
-            {
-                "source": "ld7",
-                "target": "ld9"
-            },
-
-            {
-                "source": "ld9",
-                "target": "ld7"
-            },
-            {
-                "source": "ld8",
-                "target": "ld13"
-            },
-
-            {
-                "source": "ld13",
-                "target": "ld8"
-            },
-            {
-                "source": "ld8",
-                "target": "ld19"
-            },
-            {
-                "source": "ld19",
-                "target": "ld8"
-            },
-            {
-                "source": "ld8",
-                "target": "ld15"
-            },
-            {
-                "source": "ld15",
-                "target": "ld8"
-            },
-            {
-                "source": "ld19",
-                "target": "ld15"
-            },
-            {
-                "source": "ld15",
-                "target": "ld19"
-            },
-            {
-                "source": "ld10",
-                "target": "ld11"
-            },
-            {
-                "source": "ld11",
-                "target": "ld10"
-            },
-            {
-                "source": "ld12",
-                "target": "ld14"
-            },
-
-            {
-                "source": "ld12",
-                "target": "ld14"
-            },
-
-            {
-                "source": "ld12",
-                "target": "ld16"
-            },
-            {
-                "source": "ld16",
-                "target": "ld12"
-            },
-            {
-                "source": "ld17",
-                "target": "ld18"
-            },
-            {
-                "source": "ld18",
-                "target": "ld17"
             }
         ];
 
         var actual_connections = instance.getAllConnections();
 
-        /*var is_connected_1_4= false;
-        var is_connected_2_5 = false;
-        var is_connected_3_6 = false;
-        var is_connected_7_10 = false;
-        var is_connected_8_11= false;
-        var is_connected_9_16 = false;
-        var is_connected_11_15 = false;
-        var is_connected_10_12 = false;*/
-        var is_connected_17_18 = false;
+
+        var is_connected_1_3 = false;
         var unallowed_connection_present = false;
 
-        /* actual_connections.forEach(function (connection) {
-             var this_connection = {
-                 "source": connection.sourceId,
-                 "target": connection.targetId
-             };
- 
-             if(!is_connected_1_4){
-                 is_connected_1_4 = correct_connections_1_4.find(function (conn) {
-                     return conn.source === this_connection.source && conn.target === this_connection.target;
-                   });
-             }
- 
-            if(!unallowed_connection_present){
-                 unallowed_connection_present = !(allowed_connections.find(function (conn) {
-                     return conn.source === this_connection.source && conn.target === this_connection.target;
-                 }));
-             }
- 
-         });
-         actual_connections.forEach(function (connection) {
-             var this_connection = {
-                 "source": connection.sourceId,
-                 "target": connection.targetId
-             };
- 
-             if(!is_connected_2_5){
-                 is_connected_2_5 = correct_connections_2_5.find(function (conn) {
-                     return conn.source === this_connection.source && conn.target === this_connection.target;
-                   });
-             }
- 
-            if(!unallowed_connection_present){
-                 unallowed_connection_present = !(allowed_connections.find(function (conn) {
-                     return conn.source === this_connection.source && conn.target === this_connection.target;
-                 }));
-             }
- 
-         });
-         actual_connections.forEach(function (connection) {
-             var this_connection = {
-                 "source": connection.sourceId,
-                 "target": connection.targetId
-             };
- 
-             if(!is_connected_3_6){
-                 is_connected_3_6 = correct_connections_3_6.find(function (conn) {
-                     return conn.source === this_connection.source && conn.target === this_connection.target;
-                   });
-             }
- 
-            if(!unallowed_connection_present){
-                 unallowed_connection_present = !(allowed_connections.find(function (conn) {
-                     return conn.source === this_connection.source && conn.target === this_connection.target;
-                 }));
-             }
- 
-         });
-         actual_connections.forEach(function (connection) {
-             var this_connection = {
-                 "source": connection.sourceId,
-                 "target": connection.targetId
-             };
- 
-             if(!is_connected_7_10){
-                 is_connected_7_10 = correct_connections_7_10.find(function (conn) {
-                     return conn.source === this_connection.source && conn.target === this_connection.target;
-                   });
-             }
- 
-            if(!unallowed_connection_present){
-                 unallowed_connection_present = !(allowed_connections.find(function (conn) {
-                     return conn.source === this_connection.source && conn.target === this_connection.target;
-                 }));
-             }
- 
-         });
-         actual_connections.forEach(function (connection) {
-             var this_connection = {
-                 "source": connection.sourceId,
-                 "target": connection.targetId
-             };
- 
-             if(!is_connected_8_11){
-                 is_connected_8_11 = correct_connections_8_11.find(function (conn) {
-                     return conn.source === this_connection.source && conn.target === this_connection.target;
-                 });
-             }
-             if(!unallowed_connection_present){
-                 unallowed_connection_present = !(allowed_connections.find(function (conn) {
-                     return conn.source === this_connection.source && conn.target === this_connection.target;
-                 }));
-             }
- 
-         });
-         actual_connections.forEach(function (connection) {
-             var this_connection = {
-                 "source": connection.sourceId,
-                 "target": connection.targetId
-             };
- 
-             if(!is_connected_9_16){
-                 is_connected_9_16= correct_connections_9_16.find(function (conn) {
-                     return conn.source === this_connection.source && conn.target === this_connection.target;
-                   });
-             }
- 
-            if(!unallowed_connection_present){
-                 unallowed_connection_present = !(allowed_connections.find(function (conn) {
-                     return conn.source === this_connection.source && conn.target === this_connection.target;
-                 }));
-             }
- 
-         });
-         actual_connections.forEach(function (connection) {
-             var this_connection = {
-                 "source": connection.sourceId,
-                 "target": connection.targetId
-             };
- 
-             if(!is_connected_11_15){
-                 is_connected_11_15= correct_connections_11_15.find(function (conn) {
-                     return conn.source === this_connection.source && conn.target === this_connection.target;
-                   });
-             }
- 
-            if(!unallowed_connection_present){
-                 unallowed_connection_present = !(allowed_connections.find(function (conn) {
-                     return conn.source === this_connection.source && conn.target === this_connection.target;
-                 }));
-             }
-         });
-         actual_connections.forEach(function (connection) {
-             var this_connection = {
-                 "source": connection.sourceId,
-                 "target": connection.targetId
-             };
- 
-             if(!is_connected_10_12){
-                 is_connected_10_12 = correct_connections_10_12.find(function (conn) {
-                     return conn.source === this_connection.source && conn.target === this_connection.target;
-                   });
-             }
- 
-            if(!unallowed_connection_present){
-                 unallowed_connection_present = !(allowed_connections.find(function (conn) {
-                     return conn.source === this_connection.source && conn.target === this_connection.target;
-                 }));
-             }
-         });*/
         actual_connections.forEach(function (connection) {
             var this_connection = {
                 "source": connection.sourceId,
                 "target": connection.targetId
             };
 
-            if (!is_connected_17_18) {
-                is_connected_17_18 = correct_connections_17_18.find(function (conn) {
+            if (!is_connected_1_3) {
+                is_connected_1_3 = correct_connections_1_3.find(function (conn) {
                     return conn.source === this_connection.source && conn.target === this_connection.target;
                 });
             }
@@ -445,14 +185,14 @@ jsPlumb.ready(function () {
         });
 
         //short cut can be used for debugging
-        if (is_connected_17_18 && !unallowed_connection_present) {
+        if (is_connected_1_3 && !unallowed_connection_present) {
             alert("Alert ! Correct connection proceed to take reading.");
             document.getElementById("check-button").disabled = true;
-            document.querySelector("#connection-table").innerHTML = "";
+            document.getElementById("connection-table").innerHTML = "";
             rightconnection = true;
             disable_all();
             setTimeout(function () {
-                alert("Now turn on the power supply to perform No-load test on single phase induction motor");
+                alert("Now turn on the power supply");
             }, 2000);
         }
         else {
@@ -553,10 +293,9 @@ function disable_all() {
     });
 }
 
-var blocked_rotor = false;
-var rotoroffstate = true;
+
 var mcboffstate = true;
-var were = 270;
+
 function mcbonoff() {
     if (rightconnection == true) {
 
@@ -568,28 +307,9 @@ function mcbonoff() {
             document.getElementById('myimage2').src = '/static/images/push2.png';
             document.getElementById('myimage3').src = '/static/images/push2.png';
 
-            rotaronoff();
+            rangeChange();
         }
-        else if (blocked_rotor) {
-            mcboffstate = true;
-            document.getElementById('cirmover').style.animation = "rotation 0s infinite linear";
-            rotoroffstate = true;
-            document.getElementById('myimage').src = '/static/images/mcboff.png';
-            document.getElementById('myimage1').src = '/static/images/push1.png';
-            document.getElementById('myimage2').src = '/static/images/push1.png';
-            document.getElementById('myimage3').src = '/static/images/push1.png';
-            rangeMeter.value = 0;
-            rangeShow0.value = 0;
-            rangeShow1.value = 0;
-            rangeShow2.value = 0;
-            rangeShow3.value = 0;
-            rangeShow4.value = 0;
-            rangeShow5.value = 0;
-            rangeClock1.style.transform = 'rotate(' + (-62) + 'deg)';
-            rangeClock2.style.transform = 'rotate(' + (-62) + 'deg)';
-            rangeClock3.style.transform = 'rotate(' + (-62) + 'deg)';
-            document.getElementById("rotor_blocker").src = "/static/images/rotor_blocker.jfif";
-        }
+
         else {
             return;
         }
@@ -599,122 +319,120 @@ function mcbonoff() {
     }
 }
 
-var rangeMeter = document.querySelector('#range');
+var rangeMeter = document.getElementById('range');
 
-var rangeShow0 = document.querySelector("#show00");
-var rangeShow1 = document.querySelector("#show1");
-var rangeShow2 = document.querySelector("#show2");
-var rangeShow3 = document.querySelector("#show3");
-var rangeShow4 = document.querySelector("#show4");
-var rangeShow5 = document.querySelector("#show5");
+var rangeShow1 = document.getElementById("show01");
+var rangeShow2 = document.getElementById("show02");
+var rangeShow3 = document.getElementById("show03");
 
-var rangeClock1 = document.querySelector('#meter1');
-var rangeClock2 = document.querySelector('#meter2');
-var rangeClock3 = document.querySelector('#meter3');
+var meterShow1 = document.getElementById("show1");
+var meterShow2 = document.getElementById("show2");
+var meterShow3 = document.getElementById("show3");
 
-var table = document.querySelector('#table');
+var rangeClock1 = document.getElementById('meter1');
+var rangeClock2 = document.getElementById('meter2');
 
-function rotaronoff() {
-
-    if (mcboffstate == false) {
-        if (rotoroffstate == true) {
-            rotoroffstate = false;
-            if (blocked_rotor) {
-                document.getElementById('cirmover').style.animation = "rotation 0s infinite linear";
-            }
-            else {
-                document.getElementById('cirmover').style.animation = "rotation 3s infinite linear";
-            }
-            document.getElementById("range").disabled = false;
-
-            if (blocked_rotor) {
-                rangeMeter.value = 0;
-            }
-            else {
-                rangeMeter.value = 1;
-            }
-            rangeChange();
-        }
-        else {
-            return;
-        }
-    }
-    else {
-        return;
-    }
-}
-
-const volt = [0, 99, 119, 140, 161, 179, 200];
-const ampm = [0, 1.1, 1.17, 1.25, 1.32, 1.39, 1.46];
-const watt = [0, 52, 60, 71, 79, 91, 100];
-const speed = [0, 1000, 1100, 1193, 1295, 1386, 1495];
-
-const blocked_volt = [0, 75];
-const blocked_ampm = [0, 2.4];
-const blocked_watt = [0, 120];
-
-function rangeChange() {
-
-    const val = rangeMeter.value;
-    rangeShow1.value = val;
-    if (blocked_rotor) {
-        rangeShow2.value = blocked_volt[val];
-        rangeClock1.style.transform = 'rotate(' + (-62 + (((blocked_volt[val] / 20) * 1000) / 150)) + 'deg)';
-        rangeShow3.value = blocked_ampm[val];
-        rangeClock2.style.transform = 'rotate(' + (-62 + ((blocked_ampm[val] * 1000) / 90)) + 'deg)';
-        rangeShow4.value = blocked_watt[val];
-        rangeClock3.style.transform = 'rotate(' + (-62 + (((blocked_watt[val] / 10) * 1000) / 100)) + 'deg)';
-        rangeShow0.value = String(blocked_volt[val]) + "V";
-        if (val == 1) {
-            document.getElementById("range").disabled = true;
-            blocked_rotor = false;
-            setTimeout(function () {
-                alert("Both experiments are completed. Hope you have noted down the final values.");
-            }, 2000);
-        }
-    }
-    else {
-        rangeShow2.value = volt[val];
-        rangeClock1.style.transform = 'rotate(' + (-62 + (((volt[val] / 20) * 1000) / 150)) + 'deg)';
-        rangeShow3.value = ampm[val];
-        rangeClock2.style.transform = 'rotate(' + (-62 + ((ampm[val] * 1000) / 90)) + 'deg)';
-        rangeShow4.value = watt[val];
-        rangeClock3.style.transform = 'rotate(' + (-62 + (((watt[val] / 10) * 1000) / 100)) + 'deg)';
-        rangeShow5.value = speed[val];
+var table = document.getElementById('table');
 
 
-        if (val == 1) {
-            rangeShow0.value = "100V";
-            document.getElementById('cirmover').style.animation = "rotation 3s infinite linear";
-        }
-        else if (val == 2) {
-            rangeShow0.value = "120V";
-            document.getElementById('cirmover').style.animation = "rotation 2.5s infinite linear";
-        }
-        else if (val == 3) {
-            rangeShow0.value = "140V";
-            document.getElementById('cirmover').style.animation = "rotation 2s infinite linear";
-        }
-        else if (val == 4) {
-            rangeShow0.value = "160V";
-            document.getElementById('cirmover').style.animation = "rotation 1.5s infinite linear";
-        }
-        else if (val == 5) {
-            rangeShow0.value = "180V";
-            document.getElementById('cirmover').style.animation = "rotation 1s infinite linear";
-        }
-        else if (val == 6) {
-            rangeShow0.value = "200V";
-            document.getElementById('cirmover').style.animation = "rotation 0.5s infinite linear";
-            document.getElementById("range").disabled = true;
-            blocked_rotor = true;
-            setTimeout(function () {
-                alert("Now turn off then turn on the power supply to perform *Block rotor* test on single phase induction motor");
-            }, 2000);
+const supply_voltage = [210, 212, 211, 212, 214, 215, 216];
+const supply_current = [2.5, 2.4, 2.3, 2.2, 2.1, 2.0, 1.9];
+const s1 = [4.8, 4.8, 4.8, 4.6, 4.1, 3.9, 3.7];
+const s2 = [0.9, 0.8, 0.9, 0.8, 0.8, 0.8, 0.8];
+const speed = [1296, 1321, 1333, 1388, 1444, 1471, 1515];
 
-        }
 
-    }
-}
-
+var counter = 6;
 rangeMeter.addEventListener('input', rangeChange);
+function rangeChange() {
+    const val = +rangeMeter.value;
+    rangeShow3.value = val;
+
+    meterShow1.value = supply_voltage[6 - val];
+    rangeClock1.style.transform = 'rotate(' + (-62 + (+meterShow1.value / 3)) + 'deg)';
+    meterShow2.value = supply_current[6 - val];
+    rangeClock2.style.transform = 'rotate(' + (-62 + (+meterShow2.value * 10)) + 'deg)';
+
+    rangeShow1.value = s1[6 - val];
+    rangeShow2.value = s2[6 - val];
+
+    meterShow3.value = speed[6 - val];
+    document.getElementById('cirmover').style.animation = `rotation ${(1600 - +meterShow3.value) / 500}s infinite linear`;
+    if (val == counter) {
+        range.disabled = true;
+        add.disabled = false;
+    }
+}
+
+function addToTable() {
+    const row = table.insertRow(7 - counter);
+    const cell1 = row.insertCell(0);
+    cell1.setAttribute('style', 'text-align: center; height: 40px; font-size: 18px; font-weight: bold;');
+    const cell2 = row.insertCell(1);
+    cell2.setAttribute('style', 'text-align: center; height: 40px; font-size: 18px; font-weight: bold;');
+    const cell3 = row.insertCell(2);
+    cell3.setAttribute('style', 'text-align: center; height: 40px; font-size: 18px; font-weight: bold;');
+    const cell4 = row.insertCell(3);
+    cell4.setAttribute('style', 'text-align: center; height: 40px; font-size: 18px; font-weight: bold;');
+    const cell5 = row.insertCell(4);
+    cell5.setAttribute('style', 'text-align: center; height: 40px; font-size: 18px; font-weight: bold;');
+    const cell6 = row.insertCell(5);
+    cell6.setAttribute('style', 'text-align: center; height: 40px; font-size: 18px; font-weight: bold;');
+
+
+    cell1.innerHTML = 7 - counter;
+    cell2.innerHTML = supply_voltage[6 - counter];
+    cell3.innerHTML = supply_current[6 - counter];
+    cell4.innerHTML = speed[6 - counter];
+    cell5.innerHTML = s1[6 - counter];
+    cell6.innerHTML = s2[6 - counter];
+
+
+    trace1.x.push(cell3.innerHTML);
+    trace1.y.push(cell4.innerHTML);
+
+    range.disabled = false;
+    add.disabled = true;
+    counter--;
+    if (counter == -1) {
+        range.disabled = true;
+        graph.disabled = false;
+    }
+}
+
+var trace1 = {
+    x: [],
+    y: [],
+    z: [],
+    type: 'scatter'
+};
+
+function drawgraph() {
+    var data = [trace1];
+    var layout = {
+        xaxis: {
+            title: {
+                text: 'Current(A)',
+                font:
+                {
+                    family: 'Courier New, monoscope',
+                    size: 18,
+                    color: '#ff0000'
+                }
+            },
+        },
+        yaxis: {
+            title: {
+                text: 'Speed(rpm)',
+                font:
+                {
+                    family: 'Courier New, monoscope',
+                    size: 18,
+                    color: '#ff0000'
+                }
+            },
+        }
+    };
+    Plotly.newPlot('myDiv', data, layout, { showSendToCloud: true });
+    document.getElementById("graph").disabled = true;
+}

@@ -90,12 +90,13 @@
                                 style="background-color:#27D447; border:none; padding: 5px; border-radius:5px">Check</button>
                         </div>
                         <div>
-                            <button disabled="true"
-                                style="background-color:#27D447; border:none; padding: 5px; border-radius:5px">_____</button>
+                            <button disabled="true" id="add" onclick="addToTable()"
+                                style="background-color:#27D447; border:none; padding: 5px; border-radius:5px">Add to
+                                Table</button>
                         </div>
                         <div>
-                            <button disabled="true"
-                                style="background-color:#27D447; border:none; padding: 5px; border-radius:5px">_____
+                            <button disabled="true" id="graph" onclick="drawgraph()"
+                                style="background-color:#27D447; border:none; padding: 5px; border-radius:5px">Graph
                             </button>
                         </div>
 
@@ -142,13 +143,13 @@
                         <div class="meter2" style="position: absolute;top: -1em;left: -16em;">
                             <div class="rang" style="position: absolute;top: -1em;left: 18.9em;">
                                 <div class="rang-title">
-                                    <input class="rang-number2" id="show4" type="text" value="0" disabled="disabled" />
+                                    <input class="rang-number2" id="show1" type="text" value="0" disabled="disabled" />
                                 </div>
                                 <br>Voltmeter
                             </div>
                             <div>
                                 <svg class="meter" style="position: absolute;top: -10.5em;left: 16.7em;">
-                                    <polygon class="meter-clock" id="meter3" points="129,145 137,90 145,145"></polygon>
+                                    <polygon class="meter-clock" id="meter1" points="129,145 137,90 145,145"></polygon>
                                     <circle class="meter-circle" r="10" cx="137" cy="145"></circle>
                                 </svg>
                             </div>
@@ -162,7 +163,7 @@
                         <div class="meter2" style="position: absolute; left: -16em; top: -1em;">
                             <div class="rang" style="position: absolute;top: -1em;left: 18.9em;">
                                 <div class="rang-title">
-                                    <input class="rang-number2" id="show3" type="text" value="0" disabled="disabled" />
+                                    <input class="rang-number2" id="show2" type="text" value="0" disabled="disabled" />
                                 </div>
                                 <br>Ammeter
                             </div>
@@ -191,13 +192,13 @@
 
                         <div class="rang" style="position: absolute;top: 7.7em;left: 4.8em;">
                             <div class="rang-title4">
-                                <input class="rang-number4" id="show5" type="text" value="0" disabled="disabled" />
+                                <input class="rang-number4" id="show01" type="text" value="0" disabled="disabled" />
                             </div>
                         </div>
 
                         <div class="rang" style="position: absolute;top: 7.7em;left: 14.4em;">
                             <div class="rang-title4">
-                                <input class="rang-number4" id="show6" type="text" value="0" disabled="disabled" />
+                                <input class="rang-number4" id="show02" type="text" value="0" disabled="disabled" />
                             </div>
                         </div>
 
@@ -206,12 +207,12 @@
 
                             <div class="rang" style="position: relative; left: -1em; top: -1em;">
                                 <div class="rang-title2">
-                                    <input class="rang-number" id="show7" type="text" value="0" disabled="disabled" />
+                                    <input class="rang-number" id="show03" type="text" value="6" disabled="disabled" />
                                 </div>
                             </div>
                             <div class="slidecontainer" style="position:relative; top: -2.4em; left: 1.5em;">
-                                <input class="rang-slider" disabled="true" id="range" type="range" min="0" max="9"
-                                    value="0" />
+                                <input class="rang-slider" disabled="true" id="range" type="range" min="0" max="6"
+                                    value="6" />
                             </div>
                         </div>
 
@@ -229,7 +230,7 @@
                         <div style="top:-1em; left: 3em;"><b>Rotor View</b></div>
                         <div class="rang" style="top: 9em;left: -1em;">
                             <div class="rang-title">
-                                <input class="rang-number4" id="show5" type="text" value="0" disabled="disabled" />
+                                <input class="rang-number4" id="show3" type="text" value="0" disabled="disabled" />
                             </div>
                         </div>
                     </div>
@@ -240,7 +241,7 @@
         <div class="row" style="width:1360px;">
             <div class="column50">
                 <div>
-                    <table id="table1" class="table">
+                    <table id="table" class="table">
                         <tr>
                             <th>Sl.</th>
                             <th>Supply voltage (V)</th>
@@ -255,7 +256,7 @@
             <div class="column50">
                 <div style="position: relative; top: -0.8em;"><b>Current VS Speed plot of DC shunt motor</b></div>
                 <div class="container" style="position: relative; left: 2em;">
-                    <div class="box" id="myDiv2" style="width:560px;height:335px;"></div>
+                    <div class="box" id="myDiv" style="width:560px;height:335px;"></div>
                 </div>
             </div>
         </div>

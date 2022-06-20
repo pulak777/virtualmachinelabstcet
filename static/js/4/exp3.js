@@ -821,7 +821,6 @@ var trace2 = {
     type: 'scatter'
 }
 function drawgraph() {
-    console.log(trace1, trace2);
     var data = [trace1];
     var layout = {
         xaxis: {
