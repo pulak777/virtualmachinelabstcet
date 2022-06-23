@@ -710,7 +710,7 @@ function rangeChange1() {
     if (val == counter_prev) {
         const y = table2.insertRow(++counter_prev);
         const cell1 = y.insertCell(0);
-        cell1.setAttribute('style', 'text-align: center;');
+        cell1.setAttribute('style', 'text-align: center; height: 40px; font-size: 18px; font-weight: bold;');
         cell1.innerHTML = speed_prev[val];
     }
 
@@ -761,19 +761,19 @@ var trace1 = {
 addToTable.addEventListener('click', () => {
     var y = table1.insertRow(counter);
     const cell1 = y.insertCell(0);
-    cell1.setAttribute('style', 'text-align: center;');
+    cell1.setAttribute('style', 'text-align: center; height: 40px; font-size: 18px; font-weight: bold;');
     const cell2 = y.insertCell(1);
-    cell2.setAttribute('style', 'text-align: center;');
+    cell2.setAttribute('style', 'text-align: center; height: 40px; font-size: 18px; font-weight: bold;');
     const cell3 = y.insertCell(2);
-    cell3.setAttribute('style', 'text-align: center;');
+    cell3.setAttribute('style', 'text-align: center; height: 40px; font-size: 18px; font-weight: bold;');
     const cell4 = y.insertCell(3);
-    cell4.setAttribute('style', 'text-align: center;');
+    cell4.setAttribute('style', 'text-align: center; height: 40px; font-size: 18px; font-weight: bold;');
     const cell5 = y.insertCell(4);
-    cell5.setAttribute('style', 'text-align: center;');
+    cell5.setAttribute('style', 'text-align: center; height: 40px; font-size: 18px; font-weight: bold;');
     const cell6 = y.insertCell(5);
-    cell6.setAttribute('style', 'text-align: center;');
+    cell6.setAttribute('style', 'text-align: center; height: 40px; font-size: 18px; font-weight: bold;');
     const cell7 = y.insertCell(6);
-    cell7.setAttribute('style', 'text-align: center;');
+    cell7.setAttribute('style', 'text-align: center; height: 40px; font-size: 18px; font-weight: bold;');
 
     cell1.innerHTML = counter;
     cell2.innerHTML = rangeShow3.value;
